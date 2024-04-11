@@ -18,22 +18,17 @@ export function generateMetadata({ params }) {
 		return;
 	}
 
-	let {
-		title,
-		publishedAt: publishedTime,
-		summary: description,
-		image,
-	} = post.metadata;
+	let { title, publishedAt: publishedTime, summary, image } = post.metadata;
 	let ogImage = image
 		? image
 		: `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
 	return {
 		title,
-		description,
+		description: summary,
 		openGraph: {
 			title,
-			description,
+			description: summary,
 			type: 'article',
 			publishedTime,
 			url: `${baseUrl}/blog/${post.slug}`,
@@ -46,7 +41,7 @@ export function generateMetadata({ params }) {
 		twitter: {
 			card: 'summary_large_image',
 			title,
-			description,
+			description: summary,
 			images: [ogImage],
 		},
 	};
@@ -78,7 +73,7 @@ export default function Blog({ params }) {
 						url: `${baseUrl}/blog/${post.slug}`,
 						author: {
 							'@type': 'Person',
-							name: 'My Portfolio',
+							name: "Laurent's Portfolio",
 						},
 					}),
 				}}
