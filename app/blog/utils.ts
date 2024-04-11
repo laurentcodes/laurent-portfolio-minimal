@@ -53,7 +53,11 @@ export function getBlogPosts() {
 	return getMDXData(path.join(process.cwd(), 'app', 'blog', 'posts'));
 }
 
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(
+	date: string,
+	includeRelative = false,
+	includeTime = false
+) {
 	let currentDate = new Date();
 	if (!date.includes('T')) {
 		date = `${date}T00:00:00`;
@@ -81,6 +85,10 @@ export function formatDate(date: string, includeRelative = false) {
 		day: 'numeric',
 		year: 'numeric',
 	});
+
+	if (includeTime) {
+		fullDate = `${fullDate} ${targetDate.toLocaleTimeString()}`;
+	}
 
 	if (!includeRelative) {
 		return fullDate;
