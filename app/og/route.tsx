@@ -9,10 +9,10 @@ export function GET(request: Request) {
 	return new ImageResponse(
 		(
 			<div tw='flex flex-col w-full h-full justify-center bg-black'>
-				<div tw='flex flex-col w-full h-full py-12 px-4 justify-between'>
+				<div tw='flex flex-col w-full h-full p-12 justify-between'>
 					<h1 tw='text-4xl font-bold tracking-tight text-white'>
-						Laurent.{' '}
-						<span role='img' aria-label='wave'>
+						Laurent.
+						<span role='img' aria-label='wave' tw='ml-2'>
 							👋
 						</span>
 					</h1>

@@ -24,7 +24,7 @@ export function generateMetadata({ params }) {
 		? image
 		: `${baseUrl}/og?title=${encodeURIComponent(
 				title
-		  )}?description=${encodeURIComponent(summary)}`;
+		  )}&description=${encodeURIComponent(summary)}`;
 
 	return {
 		title,
