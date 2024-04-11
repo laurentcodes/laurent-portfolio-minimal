@@ -20,7 +20,7 @@ export default function Page() {
 				practicing, a problem solver. Gamer. Football, NBA and F1 fan.
 			</p>
 
-			<p className='mb-4'>
+			<p className='mb-4 font-semibold'>
 				Have a look at my Resume{' '}
 				<a
 					href='https://drive.google.com/file/d/1-pUuNuk2vuS0Nkt3GJpfqEs6J9UgaHVE/view?usp=sharing'
