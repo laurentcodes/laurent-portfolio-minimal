@@ -18,7 +18,7 @@ export function GET(request: Request) {
 						{title}
 					</h2>
 
-					<img src={OGMemoji} alt='Laurent Memoji' />
+					<OGMemoji />
 				</div>
 			</div>
 		),
