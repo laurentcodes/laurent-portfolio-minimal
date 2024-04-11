@@ -16,8 +16,8 @@ export default function Page() {
 				scalable software applications that exceed user expectations.
 			</p>
 			<p className='mb-4'>
-				An organized person, always comfortable learning new things, always
-				practicing, a problem solver. Gamer. Football, NBA and F1 fan.
+				I am an organized person, passionate about learning and practising new
+				things and a problem solver. Gamer. An avid Football, NBA and F1 fan.
 			</p>
 
 			<p className='mb-4 font-semibold'>
