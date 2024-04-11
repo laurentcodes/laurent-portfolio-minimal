@@ -9,7 +9,7 @@ export function GET(request: Request) {
 			<div className='flex flex-col w-full h-full justify-center bg-black'>
 				<div className='flex flex-col w-full py-12 px-4 justify-between p-8'>
 					<h1 className='flex flex-col text-4xl font-bold tracking-tight text-left text-white font-bold'>
-						Laurent. 👋
+						Laurent.
 					</h1>
 
 					<h2 className='flex flex-col text-4xl font-bold tracking-tight text-left text-white font-bold'>
