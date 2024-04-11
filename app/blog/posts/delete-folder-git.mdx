@@ -1,0 +1,29 @@
+---
+title: 'How to Delete Folder from Git'
+summary: 'if you're as clumsy as i am and this happens to you often; you'd be needingthis a lot.'
+publishedAt: '2024-01-11'
+---
+
+if you're as clumsy as i am and this happens to you often; you'd be needing this a lot.
+
+i find myself mistakenly pushing folders i don't want to github/gitlab and there's really no easy way of removing such from the web clients so i keep having to search for ways to do this every single time and for this reason i will be writing it down here so i can easily just refer to it.
+
+### Removing Folder from Git While Keeping it on Local
+
+this can be easily done by;
+
+```bash
+git rm -r --cached folder-name
+```
+
+after running the command; a git add, commit and push should do the rest of the job easily.
+
+### Removing Folder from Both Git and Local
+
+```bash
+git rm -r folder-name
+```
+
+after running this also, like the previous one; a commit and push would take care of the rest
+
+hope this helps future me, and you.
