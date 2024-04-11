@@ -3,7 +3,8 @@ import { ImageResponse } from 'next/og';
 export function GET(request: Request) {
 	let url = new URL(request.url);
 	let title = url.searchParams.get('title') || 'Laurent. 👋';
-	let description = url.searchParams.get('description') || '';
+	let description =
+		url.searchParams.get('description') || "Laurent's Portfolio";
 
 	return new ImageResponse(
 		(
