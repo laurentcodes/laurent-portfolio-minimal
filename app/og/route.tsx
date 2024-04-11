@@ -8,20 +8,18 @@ export function GET(request: Request) {
 
 	return new ImageResponse(
 		(
-			<div className='flex flex-col w-full h-full justify-center bg-black'>
-				<div className='flex flex-col w-full py-12 px-4 justify-between'>
-					<h1 className='text-4xl font-bold tracking-tight text-white'>
+			<div tw='flex flex-col w-full h-full justify-center bg-black'>
+				<div tw='flex flex-col w-full h-full py-12 px-4 justify-between'>
+					<h1 tw='text-4xl font-bold tracking-tight text-white'>
 						Laurent.{' '}
-						<span role='img' aria-label='wave emoji'>
+						<span role='img' aria-label='wave'>
 							👋
 						</span>
 					</h1>
 
-					<h2 className='text-4xl font-bold tracking-tight text-white'>
-						{title}
-					</h2>
+					<h2 tw='text-4xl font-bold tracking-tight text-white'>{title}</h2>
 
-					<p className='text-lg text-white'>{description}</p>
+					<p tw='text-lg text-white'>{description}</p>
 				</div>
 			</div>
 		),
