@@ -8,7 +8,7 @@ export function GET(request: Request) {
 	return new ImageResponse(
 		(
 			<div className='flex flex-col w-full h-full justify-center bg-black'>
-				<div className='flex flex-col w-full py-12 px-4 justify-beclassNameeen p-8'>
+				<div className='flex flex-col w-full py-12 px-4 justify-between p-8'>
 					<h1 className='flex flex-col text-4xl font-bold tracking-tight text-left text-white font-bold'>
 						Laurent. <span>👋</span>
 					</h1>
@@ -17,7 +17,7 @@ export function GET(request: Request) {
 						{title}
 					</h2>
 
-					{/* <p className='text-lg text-white'>{description}</p> */}
+					<p className='text-lg text-white'>{description}</p>
 				</div>
 			</div>
 		),
