@@ -9,12 +9,15 @@ export function GET(request: Request) {
 	return new ImageResponse(
 		(
 			<div className='flex flex-col w-full h-full justify-center bg-black'>
-				<div className='flex flex-col w-full py-12 px-4 justify-between p-8'>
-					<h1 className='flex flex-col text-4xl font-bold tracking-tight text-left text-white'>
-						Laurent. <span>👋</span>
+				<div className='flex flex-col w-full py-12 px-4 justify-between'>
+					<h1 className='text-4xl font-bold tracking-tight text-white'>
+						Laurent.{' '}
+						<span role='img' aria-label='wave emoji'>
+							👋
+						</span>
 					</h1>
 
-					<h2 className='flex flex-col text-4xl font-bold tracking-tight text-left text-white'>
+					<h2 className='text-4xl font-bold tracking-tight text-white'>
 						{title}
 					</h2>
 
