@@ -3,7 +3,7 @@ export default function Skills() {
 		<section>
 			<p className='mb-5'>Here is an overview of my skills and experience:</p>
 
-			<div className='flex flex-col gap-3'>
+			<div className='flex flex-col gap-1 md:gap-3'>
 				<p>
 					Mobile Development:{' '}
 					<span className='text-blue-500'>Flutter, React Native</span>

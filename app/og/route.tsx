@@ -16,7 +16,7 @@ export function GET(request: Request) {
 						{title}
 					</h2>
 
-					<img src='../og-memoji.svg' alt="Laurent's Memoji" />
+					{/* <img src='../og-memoji.svg' alt="Laurent's Memoji" /> */}
 				</div>
 			</div>
 		),
