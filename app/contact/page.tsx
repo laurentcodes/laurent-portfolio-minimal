@@ -1,4 +1,14 @@
 import Link from 'next/link';
+import { baseUrl } from 'app/sitemap';
+import { metadata } from 'utils/metadata';
+
+export function generateMetadata() {
+	return metadata({
+		title: 'Contact',
+		description: 'Contact me.',
+		url: `${baseUrl}/contact`,
+	});
+}
 
 export default function Contact() {
 	return (

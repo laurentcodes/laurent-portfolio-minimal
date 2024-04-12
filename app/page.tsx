@@ -1,4 +1,15 @@
+import { baseUrl } from 'app/sitemap';
+import { metadata } from 'utils/metadata';
+
 import { BlogPosts } from 'app/components/posts';
+
+export function generateMetadata() {
+	return metadata({
+		title: 'Laurent. 👋',
+		description: "Laurent's Portfolio.",
+		url: `${baseUrl}`,
+	});
+}
 
 export default function Page() {
 	return (

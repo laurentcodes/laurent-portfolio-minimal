@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { CustomMDX } from 'app/components/mdx';
 import { formatDate, getBlogPosts } from 'app/blog/utils';
 import { baseUrl } from 'app/sitemap';
+import { metadata } from 'utils/metadata';
 
 export async function generateStaticParams() {
 	let posts = getBlogPosts();
@@ -20,34 +21,13 @@ export function generateMetadata({ params }) {
 
 	let { title, publishedAt: publishedTime, summary, image } = post.metadata;
 
-	let ogImage = image
-		? image
-		: `${baseUrl}/og?title=${encodeURIComponent(
-				title
-		  )}&description=${encodeURIComponent(summary)}`;
-
-	return {
+	return metadata({
 		title,
 		description: summary,
-		openGraph: {
-			title,
-			description: summary,
-			type: 'article',
-			publishedTime,
-			url: `${baseUrl}/blog/${post.slug}`,
-			images: [
-				{
-					url: ogImage,
-				},
-			],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description: summary,
-			images: [ogImage],
-		},
-	};
+		publishedTime,
+		url: `${baseUrl}/blog/${post.slug}`,
+		image,
+	});
 }
 
 export default function Blog({ params }) {

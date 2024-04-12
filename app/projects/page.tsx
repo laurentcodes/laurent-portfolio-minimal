@@ -1,4 +1,14 @@
 import Link from 'next/link';
+import { baseUrl } from 'app/sitemap';
+import { metadata } from 'utils/metadata';
+
+export function generateMetadata() {
+	return metadata({
+		title: 'Projects',
+		description: 'Check out my projects.',
+		url: `${baseUrl}/projects`,
+	});
+}
 
 const projects = [
 	{

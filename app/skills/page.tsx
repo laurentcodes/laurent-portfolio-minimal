@@ -1,3 +1,14 @@
+import { baseUrl } from 'app/sitemap';
+import { metadata } from 'utils/metadata';
+
+export function generateMetadata() {
+	return metadata({
+		title: 'Skills',
+		description: 'Check out my skills.',
+		url: `${baseUrl}/skills`,
+	});
+}
+
 export default function Skills() {
 	return (
 		<section>

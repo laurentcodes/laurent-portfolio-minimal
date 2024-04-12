@@ -1,39 +1,10 @@
 import './global.css';
-import type { Metadata } from 'next';
+
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import { baseUrl } from './sitemap';
 
 import { Navbar } from './components/nav';
 import Footer from './components/footer';
-
-export const metadata: Metadata = {
-	metadataBase: new URL(baseUrl),
-	title: {
-		default: 'Laurent. 👋',
-		template: '%s | Laurent',
-	},
-	description: "Laurent's Portfolio.",
-	openGraph: {
-		title: 'Laurent. 👋',
-		description: "Laurent's Portfolio.",
-		url: baseUrl,
-		siteName: "Laurent's Portfolio",
-		locale: 'en_US',
-		type: 'website',
-	},
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-			index: true,
-			follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
-};
 
 const cx = (...classes) => classes.filter(Boolean).join(' ');
 
