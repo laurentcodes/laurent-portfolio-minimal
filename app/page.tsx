@@ -44,6 +44,7 @@ export default function Page() {
 			</p>
 
 			<div className='my-8'>
+				<h2 className='mb-4 font-bold text-xl'>Latest Posts</h2>
 				<BlogPosts limit={3} />
 			</div>
 		</section>
