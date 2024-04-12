@@ -3,7 +3,7 @@ import { metadata } from 'utils/metadata';
 
 export function generateMetadata() {
 	return metadata({
-		title: 'Skills',
+		title: 'Skills | Laurent',
 		description: 'Check out my skills.',
 		url: `${baseUrl}/skills`,
 	});

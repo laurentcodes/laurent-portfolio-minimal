@@ -22,7 +22,7 @@ export function generateMetadata({ params }) {
 	let { title, publishedAt: publishedTime, summary, image } = post.metadata;
 
 	return metadata({
-		title,
+		title: `${title} | Laurent`,
 		description: summary,
 		publishedTime,
 		url: `${baseUrl}/blog/${post.slug}`,
