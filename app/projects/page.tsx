@@ -4,7 +4,7 @@ import { metadata } from 'utils/metadata';
 
 export function generateMetadata() {
 	return metadata({
-		title: 'Projects - Laurent',
+		title: 'Projects',
 		description: 'Check out my projects.',
 		url: `${baseUrl}/projects`,
 	});

@@ -4,7 +4,7 @@ import { metadata } from 'utils/metadata';
 
 export function generateMetadata() {
 	return metadata({
-		title: 'Contact - Laurent',
+		title: 'Contact',
 		description: 'Contact me.',
 		url: `${baseUrl}/contact`,
 	});
