@@ -5,7 +5,7 @@ import { BlogPosts } from 'app/components/posts';
 
 export function generateMetadata() {
 	return metadata({
-		title: 'Laurent',
+		title: "Laurent's Portfolio",
 		description: 'Welcome to my Portfolio & Blog',
 		url: `${baseUrl}`,
 	});
