@@ -1,5 +1,7 @@
 import './global.css';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 
@@ -29,6 +31,7 @@ export default function RootLayout({
 					<Footer />
 				</main>
 			</body>
+			<GoogleAnalytics gaId='G-Q9PT73T357' />
 		</html>
 	);
 }
