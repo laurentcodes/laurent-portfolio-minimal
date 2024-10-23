@@ -51,6 +51,11 @@ const projects = [
 		tags: ['Express.js', 'MongoDB', 'Amazon S3'],
 		url: 'https://github.com/laurentcodes/tech-assessment-social-api',
 	},
+	{
+		name: 'Gratitude & Light Candles',
+		tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Elementor'],
+		url: 'https://gratitudeandlightcandles.ca',
+	},
 ];
 
 export default function Projects() {
