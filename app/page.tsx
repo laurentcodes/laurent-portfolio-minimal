@@ -34,7 +34,7 @@ export default function Page() {
 			<p className='mb-4 font-semibold'>
 				Have a look at my Resume{' '}
 				<a
-					href='https://drive.google.com/file/d/1-pUuNuk2vuS0Nkt3GJpfqEs6J9UgaHVE/view?usp=sharing'
+					href='https://drive.google.com/file/d/1q4-Y-k3fhsdzbwN31XRDb5UGBEyo45Qp/view?usp=sharing'
 					className='text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200'
 					target='_blank'
 				>
