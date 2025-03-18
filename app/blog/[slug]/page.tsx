@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { CustomMDX } from 'app/components/mdx';
+import { CustomMDX } from 'components/mdx';
 import { formatDate, getBlogPosts } from 'app/blog/utils';
 import { baseUrl } from 'app/sitemap';
 import { metadata } from 'utils/metadata';
@@ -61,17 +61,28 @@ export default function Blog({ params }) {
 					}),
 				}}
 			/>
-			<h1 className='title font-semibold text-2xl tracking-tighter'>
-				{post.metadata.title}
-			</h1>
-			<div className='flex justify-between items-center mt-2 mb-8 text-sm'>
-				<p className='text-sm text-neutral-600 dark:text-neutral-400'>
-					{formatDate(post.metadata.publishedAt, true, true)}
-				</p>
+
+			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6 mb-8'>
+				<h1 className='font-semibold text-2xl tracking-tighter mb-4 text-blue-600 dark:text-blue-400'>
+					{post.metadata.title}
+				</h1>
+
+				<div className='flex items-center mb-6'>
+					<span className='text-xs px-2 py-1 rounded bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300 tabular-nums'>
+						{formatDate(post.metadata.publishedAt, true, true)}
+					</span>
+				</div>
+
+				{post.metadata.summary && (
+					<p className='text-sm text-neutral-600 dark:text-neutral-400 border-l-4 border-blue-500 pl-3 py-1 mb-6 italic'>
+						{post.metadata.summary}
+					</p>
+				)}
+
+				<article className='prose prose-blue dark:prose-invert prose-pre:p-0 prose-pre:bg-transparent prose-pre:m-0 prose-pre:overflow-visible max-w-none'>
+					<CustomMDX source={post.content} />
+				</article>
 			</div>
-			<article className='prose'>
-				<CustomMDX source={post.content} />
-			</article>
 		</section>
 	);
 }
