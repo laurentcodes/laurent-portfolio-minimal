@@ -113,24 +113,26 @@ const workExperience = [
 export default function Work() {
 	return (
 		<section>
-			<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>Work</h1>
+			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6'>
+				<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>Work</h1>
 
-			<div className='mb-8 prose dark:prose-invert'>
-				<p className='text-neutral-800 dark:text-neutral-200'>
-					Below is a selection of professional projects I've worked on
-					throughout my career. This portfolio includes both projects I've built
-					from scratch and existing systems I've taken over to improve and
-					maintain. Each project showcases different aspects of my technical
-					skills and problem-solving approach.
-				</p>
-			</div>
+				<div className='mb-8 prose dark:prose-invert'>
+					<p className='text-neutral-800 dark:text-neutral-200'>
+						Below is a selection of professional projects I've worked on
+						throughout my career. This portfolio includes both projects I've
+						built from scratch and existing systems I've taken over to improve
+						and maintain. Each project showcases different aspects of my
+						technical skills and problem-solving approach.
+					</p>
+				</div>
 
-			<WorkPagination workExperience={workExperience} itemsPerPage={3} />
+				<WorkPagination workExperience={workExperience} itemsPerPage={3} />
 
-			<div className='mt-8 mb-4'>
-				<p className='text-neutral-600 dark:text-neutral-400'>
-					Additional work details available upon request.
-				</p>
+				<div className='mt-8 mb-4'>
+					<p className='text-neutral-600 dark:text-neutral-400'>
+						Additional work details available upon request.
+					</p>
+				</div>
 			</div>
 		</section>
 	);

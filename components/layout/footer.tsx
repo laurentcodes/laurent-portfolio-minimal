@@ -19,14 +19,14 @@ function ArrowIcon() {
 export default function Footer() {
 	return (
 		<footer className='mb-6 mt-8 md:mb-8 md:mt-12'>
-			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-3 md:p-4'>
+			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-4'>
 				<div className='flex flex-col md:flex-row justify-between items-center'>
 					<p className='text-xs md:text-sm text-center md:text-left text-neutral-600 dark:text-neutral-400 mb-4 md:mb-0'>
 						© {new Date().getFullYear()} Laurent's Portfolio. All rights
 						reserved.
 					</p>
 
-					<ul className='flex justify-center space-x-5 md:space-x-4 text-xs md:text-sm text-neutral-600 dark:text-neutral-400'>
+					<ul className='flex justify-center space-x-4 text-xs md:text-sm text-neutral-600 dark:text-neutral-400'>
 						<li>
 							<a
 								className='flex items-center transition-all hover:text-blue-600 dark:hover:text-blue-400'
@@ -35,7 +35,7 @@ export default function Footer() {
 								href='/rss'
 							>
 								<ArrowIcon />
-								<span className='ml-1.5 md:ml-2'>RSS</span>
+								<span className='ml-2'>RSS</span>
 							</a>
 						</li>
 
@@ -47,7 +47,7 @@ export default function Footer() {
 								href='https://github.com/laurentcodes'
 							>
 								<ArrowIcon />
-								<span className='ml-1.5 md:ml-2'>GitHub</span>
+								<span className='ml-2'>GitHub</span>
 							</a>
 						</li>
 					</ul>

@@ -72,35 +72,39 @@ const projects: Project[] = [
 export default function Projects() {
 	return (
 		<section>
-			<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>Projects</h1>
+			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6'>
+				<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>
+					Projects
+				</h1>
 
-			<p className='mb-5 text-neutral-800 dark:text-neutral-200 text-sm'>
-				Here are some of my personal and open-source projects:
-			</p>
+				<p className='mb-5 text-neutral-800 dark:text-neutral-200 text-sm'>
+					Here are some of my personal and open-source projects:
+				</p>
 
-			<ProjectsPagination projects={projects} itemsPerPage={5} />
+				<ProjectsPagination projects={projects} itemsPerPage={5} />
 
-			<Link
-				className='inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm font-medium'
-				href='https://github.com/laurentcodes'
-				target='_blank'
-			>
-				View all projects on GitHub
-				<svg
-					className='ml-1.5 w-4 h-4'
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					stroke='currentColor'
+				<Link
+					className='inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm font-medium'
+					href='https://github.com/laurentcodes'
+					target='_blank'
 				>
-					<path
-						strokeLinecap='round'
-						strokeLinejoin='round'
-						strokeWidth={2}
-						d='M14 5l7 7m0 0l-7 7m7-7H3'
-					/>
-				</svg>
-			</Link>
+					View all projects on GitHub
+					<svg
+						className='ml-1.5 w-4 h-4'
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						stroke='currentColor'
+					>
+						<path
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							strokeWidth={2}
+							d='M14 5l7 7m0 0l-7 7m7-7H3'
+						/>
+					</svg>
+				</Link>
+			</div>
 		</section>
 	);
 }

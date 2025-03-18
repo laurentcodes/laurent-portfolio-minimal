@@ -39,44 +39,46 @@ const contactMethods: ContactMethod[] = [
 export default function Contact() {
 	return (
 		<section>
-			<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>
-				Contact Me
-			</h1>
+			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6'>
+				<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>
+					Contact Me
+				</h1>
 
-			<p className='mb-5 text-neutral-800 dark:text-neutral-200 text-sm'>
-				Have a great idea? Want to say hi? Feel free to contact me through any
-				of these channels:
-			</p>
+				<p className='mb-5 text-neutral-800 dark:text-neutral-200 text-sm'>
+					Have a great idea? Want to say hi? Feel free to contact me through any
+					of these channels:
+				</p>
 
-			<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-				{contactMethods.map((method, index) => (
-					<div
-						key={index}
-						className='p-3 rounded-md border border-neutral-200 dark:border-neutral-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-200'
-					>
-						<Link
-							className='flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200'
-							href={method.url}
-							target={method.isEmail ? undefined : '_blank'}
+				<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+					{contactMethods.map((method, index) => (
+						<div
+							key={index}
+							className='p-3 rounded-md border border-neutral-200 dark:border-neutral-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-200'
 						>
-							<span className='font-medium'>{method.name}</span>
-							<svg
-								className='ml-1.5 w-4 h-4'
-								xmlns='http://www.w3.org/2000/svg'
-								fill='none'
-								viewBox='0 0 24 24'
-								stroke='currentColor'
+							<Link
+								className='flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200'
+								href={method.url}
+								target={method.isEmail ? undefined : '_blank'}
 							>
-								<path
-									strokeLinecap='round'
-									strokeLinejoin='round'
-									strokeWidth={2}
-									d='M14 5l7 7m0 0l-7 7m7-7H3'
-								/>
-							</svg>
-						</Link>
-					</div>
-				))}
+								<span className='font-medium'>{method.name}</span>
+								<svg
+									className='ml-1.5 w-4 h-4'
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 24 24'
+									stroke='currentColor'
+								>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										strokeWidth={2}
+										d='M14 5l7 7m0 0l-7 7m7-7H3'
+									/>
+								</svg>
+							</Link>
+						</div>
+					))}
+				</div>
 			</div>
 		</section>
 	);
