@@ -14,12 +14,12 @@ export function generateMetadata() {
 export default function Page() {
 	return (
 		<section>
-			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6'>
-				<h1 className='mb-6 text-2xl font-semibold tracking-tighter text-blue-600 dark:text-blue-400'>
+			<div className='p-6'>
+				<h1 className='mb-6 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
 					Laurent. 👋
 				</h1>
 
-				<div className='space-y-4 text-neutral-800 dark:text-neutral-200 mb-8'>
+				<div className='space-y-4 text-black dark:text-white mb-8'>
 					<p>
 						I'm a Software Developer specializing in JavaScript and TypeScript,
 						passionate about crafting innovative solutions through code.
@@ -41,7 +41,7 @@ export default function Page() {
 						Have a look at my Resume{' '}
 						<a
 							href='https://drive.google.com/file/d/1q4-Y-k3fhsdzbwN31XRDb5UGBEyo45Qp/view?usp=sharing'
-							className='text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200'
+							className='underline hover:text-gray-600 dark:hover:text-gray-400 px-1 transition-all duration-200 ease-out transform hover:scale-105'
 							target='_blank'
 						>
 							here
@@ -50,8 +50,8 @@ export default function Page() {
 					</p>
 				</div>
 
-				<div className='pt-6 border-t border-neutral-200 dark:border-neutral-800'>
-					<h2 className='mb-4 text-lg font-semibold text-blue-600 dark:text-blue-400'>
+				<div className='pt-6'>
+					<h2 className='mb-4 text-lg font-semibold text-black dark:text-white'>
 						Latest Posts
 					</h2>
 					<BlogPosts limit={2} showPagination={false} />

@@ -26,16 +26,12 @@ export default function WorkPagination({
 	const renderWorkItem = (work: WorkItem, index: number) => (
 		<div
 			key={index}
-			className='flex flex-col space-y-3 p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md transition-all duration-200'
+			className='flex flex-col space-y-3 p-6 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200'
 		>
-			<div className='border-b border-neutral-200 dark:border-neutral-800 pb-3 mb-2'>
-				<h2 className='text-xl font-medium text-neutral-900 dark:text-neutral-100'>
+			<div className='pb-3 mb-2'>
+				<h2 className='text-xl font-medium'>
 					{work.url ? (
-						<Link
-							href={work.url}
-							target='_blank'
-							className='hover:text-blue-500 dark:hover:text-blue-400'
-						>
+						<Link href={work.url} target='_blank' className='hover:underline'>
 							{work.project}
 						</Link>
 					) : (
@@ -43,11 +39,8 @@ export default function WorkPagination({
 					)}
 				</h2>
 
-				<p className='text-neutral-600 dark:text-neutral-400 text-sm mt-1'>
-					<span className='font-medium text-blue-600 dark:text-blue-400'>
-						Company:
-					</span>{' '}
-					{work.company}
+				<p className='text-sm mt-1'>
+					<span className='font-medium'>Company:</span> {work.company}
 				</p>
 			</div>
 
@@ -56,37 +49,26 @@ export default function WorkPagination({
 					{work.techStack.map((tech, i) => (
 						<span
 							key={i}
-							className='px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+							className='px-2 py-1 text-xs font-medium text-black dark:text-white'
 						>
 							{tech}
 						</span>
 					))}
 				</div>
 
-				<p className='text-neutral-800 dark:text-neutral-200 mb-1'>
-					<span className='font-medium text-blue-600 dark:text-blue-400'>
-						Description:
-					</span>{' '}
-					{work.description}
+				<p className='mb-1'>
+					<span className='font-medium'>Description:</span> {work.description}
 				</p>
 
-				<p className='text-neutral-800 dark:text-neutral-200 mb-1'>
-					<span className='font-medium text-blue-600 dark:text-blue-400'>
-						My Role:
-					</span>{' '}
-					{work.role}
+				<p className='mb-1'>
+					<span className='font-medium'>My Role:</span> {work.role}
 				</p>
 
-				<p className='text-neutral-800 dark:text-neutral-200 mb-1'>
-					<span className='font-medium text-blue-600 dark:text-blue-400'>
-						Impact:
-					</span>{' '}
-					{work.impact}
+				<p className='mb-1'>
+					<span className='font-medium'>Impact:</span> {work.impact}
 				</p>
 
-				<p className='text-neutral-600 dark:text-neutral-400 italic text-sm mt-2 border-t border-neutral-200 dark:border-neutral-800 pt-3'>
-					{work.access}
-				</p>
+				<p className='italic text-sm mt-2 pt-3'>{work.access}</p>
 			</div>
 		</div>
 	);

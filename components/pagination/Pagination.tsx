@@ -24,10 +24,10 @@ export default function Pagination({
 			<button
 				onClick={prevPage}
 				disabled={currentPage === 1}
-				className={`px-3 py-1 rounded  ${
+				className={`px-3 py-1 transition-all duration-200 ease-out transform ${
 					currentPage === 1
-						? 'text-neutral-400 cursor-not-allowed'
-						: 'text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer'
+						? 'text-gray-300 cursor-not-allowed'
+						: 'text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 cursor-pointer hover:scale-105'
 				}`}
 			>
 				Previous
@@ -38,10 +38,10 @@ export default function Pagination({
 					<button
 						key={i}
 						onClick={() => paginate(i + 1)}
-						className={`px-3 py-1 rounded cursor-pointer ${
+						className={`px-3 py-1 cursor-pointer transition-all duration-200 ease-out transform hover:scale-105 ${
 							currentPage === i + 1
-								? 'bg-blue-500 text-white'
-								: 'text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
+								? 'text-gray-600 dark:text-gray-400 font-medium'
+								: 'text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
 						}`}
 					>
 						{i + 1}
@@ -52,10 +52,10 @@ export default function Pagination({
 			<button
 				onClick={nextPage}
 				disabled={currentPage === totalPages}
-				className={`px-3 py-1 rounded ${
+				className={`px-3 py-1 transition-all duration-200 ease-out transform ${
 					currentPage === totalPages
-						? 'text-neutral-400 cursor-not-allowed'
-						: 'text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer'
+						? 'text-gray-300 cursor-not-allowed'
+						: 'text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 cursor-pointer hover:scale-105'
 				}`}
 			>
 				Next

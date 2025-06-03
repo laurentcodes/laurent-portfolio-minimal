@@ -39,12 +39,12 @@ const contactMethods: ContactMethod[] = [
 export default function Contact() {
 	return (
 		<section>
-			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6'>
-				<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>
+			<div className='p-6'>
+				<h1 className='mb-4 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
 					Contact Me
 				</h1>
 
-				<p className='mb-5 text-neutral-800 dark:text-neutral-200 text-sm'>
+				<p className='mb-5 text-black dark:text-white text-sm'>
 					Have a great idea? Want to say hi? Feel free to contact me through any
 					of these channels:
 				</p>
@@ -53,10 +53,10 @@ export default function Contact() {
 					{contactMethods.map((method, index) => (
 						<div
 							key={index}
-							className='p-3 rounded-md border border-neutral-200 dark:border-neutral-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-200'
+							className='p-3 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200'
 						>
 							<Link
-								className='flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200'
+								className='flex items-center hover:underline'
 								href={method.url}
 								target={method.isEmail ? undefined : '_blank'}
 							>

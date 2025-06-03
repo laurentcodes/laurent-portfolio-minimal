@@ -53,10 +53,12 @@ const skillCategories: SkillCategory[] = [
 export default function Skills() {
 	return (
 		<section>
-			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6'>
-				<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>Skills</h1>
+			<div className='p-6'>
+				<h1 className='mb-4 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
+					Skills
+				</h1>
 
-				<p className='mb-5 text-neutral-800 dark:text-neutral-200 text-sm'>
+				<p className='mb-5 text-black dark:text-white text-sm'>
 					Here is an overview of my technical skills and experience:
 				</p>
 
@@ -64,9 +66,9 @@ export default function Skills() {
 					{skillCategories.map((category, index) => (
 						<div
 							key={index}
-							className='p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md transition-all duration-200'
+							className='p-4 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200'
 						>
-							<h3 className='text-base font-medium text-blue-600 dark:text-blue-400 mb-2 pb-2 border-b border-neutral-200 dark:border-neutral-800'>
+							<h3 className='text-base font-medium mb-2 pb-2'>
 								{category.title}
 							</h3>
 
@@ -74,7 +76,7 @@ export default function Skills() {
 								{category.skills.map((skill, i) => (
 									<span
 										key={i}
-										className='px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+										className='px-2 py-1 text-xs font-medium text-black dark:text-white'
 									>
 										{skill}
 									</span>

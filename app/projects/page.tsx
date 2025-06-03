@@ -72,19 +72,19 @@ const projects: Project[] = [
 export default function Projects() {
 	return (
 		<section>
-			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6'>
-				<h1 className='mb-4 text-2xl font-semibold tracking-tighter'>
+			<div className='p-6'>
+				<h1 className='mb-4 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
 					Projects
 				</h1>
 
-				<p className='mb-5 text-neutral-800 dark:text-neutral-200 text-sm'>
+				<p className='mb-5 text-black dark:text-white text-sm'>
 					Here are some of my personal and open-source projects:
 				</p>
 
 				<ProjectsPagination projects={projects} itemsPerPage={5} />
 
 				<Link
-					className='inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm font-medium'
+					className='inline-flex items-center text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 text-sm font-medium underline px-2 py-1 transition-colors'
 					href='https://github.com/laurentcodes'
 					target='_blank'
 				>

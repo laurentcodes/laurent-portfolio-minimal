@@ -62,24 +62,24 @@ export default function Blog({ params }) {
 				}}
 			/>
 
-			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6 mb-8'>
-				<h1 className='font-semibold text-2xl tracking-tighter mb-4 text-blue-600 dark:text-blue-400'>
+			<div className='p-6 mb-8'>
+				<h1 className='font-semibold text-2xl tracking-tighter mb-4 text-black dark:text-white'>
 					{post.metadata.title}
 				</h1>
 
 				<div className='flex items-center mb-6'>
-					<span className='text-xs px-2 py-1 rounded bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300 tabular-nums'>
+					<span className='text-xs px-2 py-1 text-black dark:text-white tabular-nums'>
 						{formatDate(post.metadata.publishedAt, true, true)}
 					</span>
 				</div>
 
 				{post.metadata.summary && (
-					<p className='text-sm text-neutral-600 dark:text-neutral-400 border-l-4 border-blue-500 pl-3 py-1 mb-6 italic'>
+					<p className='text-sm text-black dark:text-white pl-3 py-1 mb-6 italic'>
 						{post.metadata.summary}
 					</p>
 				)}
 
-				<article className='prose prose-blue dark:prose-invert prose-pre:p-0 prose-pre:bg-transparent prose-pre:m-0 prose-pre:overflow-visible max-w-none'>
+				<article className='prose prose-black dark:prose-invert prose-pre:p-0 prose-pre:bg-transparent prose-pre:m-0 prose-pre:overflow-visible max-w-none text-black dark:text-white'>
 					<CustomMDX source={post.content} />
 				</article>
 			</div>

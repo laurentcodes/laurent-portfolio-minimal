@@ -13,8 +13,8 @@ export function generateMetadata() {
 export default function Page() {
 	return (
 		<section>
-			<div className='rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm p-6 mb-8'>
-				<h1 className='font-semibold text-2xl mb-8 tracking-tighter text-blue-600 dark:text-blue-400'>
+			<div className='p-6 mb-8'>
+				<h1 className='font-semibold text-2xl mb-8 tracking-tighter text-black dark:text-white'>
 					My Blog
 				</h1>
 
