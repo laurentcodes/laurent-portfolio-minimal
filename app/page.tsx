@@ -1,8 +1,6 @@
 import { baseUrl } from 'app/sitemap';
 import { metadata } from 'utils/metadata';
 
-import { BlogPosts } from 'components/posts';
-
 export function generateMetadata() {
 	return metadata({
 		title: "Laurent's Portfolio",
@@ -48,13 +46,6 @@ export default function Page() {
 						</a>
 						.
 					</p>
-				</div>
-
-				<div className='pt-6'>
-					<h2 className='mb-4 text-lg font-semibold text-black dark:text-white'>
-						Latest Posts
-					</h2>
-					<BlogPosts limit={2} showPagination={false} />
 				</div>
 			</div>
 		</section>
