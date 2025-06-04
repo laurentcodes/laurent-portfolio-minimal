@@ -14,7 +14,7 @@ export default function Page() {
 		<section>
 			<div className='p-6'>
 				<h1 className='mb-6 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
-					Laurent. 👋
+					Laurent.
 				</h1>
 
 				<div className='space-y-4 text-black dark:text-white mb-8'>
