@@ -13,11 +13,11 @@ export function generateMetadata() {
 
 const workExperience = [
 	{
-		project: 'StayFindar',
+		project: 'Stayfindar',
 		company: 'Digicomme',
 		techStack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
 		description:
-			'A modern accommodation booking platform that connects travelers with unique stays worldwide. StayFindar streamlines the property discovery and booking process with an intuitive user interface and robust search functionality.',
+			'A modern accommodation booking platform that connects travelers with unique stays worldwide. Stayfindar streamlines the property discovery and booking process with an intuitive user interface and robust search functionality.',
 		role: 'Led the entire project development to deployment, architecting the frontend infrastructure, implementing responsive design patterns, and optimizing user experience across all device types.',
 		impact:
 			'Created a comprehensive booking platform that simplifies accommodation search and reservation processes, providing travelers with seamless access to diverse lodging options.',
