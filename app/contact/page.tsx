@@ -31,7 +31,7 @@ const contactMethods: ContactMethod[] = [
 	},
 	{
 		name: 'Email',
-		url: 'mailto:stlaurentcodes@gmail.com',
+		url: 'mailto:saint@laurentcodes.xyz',
 		isEmail: true,
 	},
 ];

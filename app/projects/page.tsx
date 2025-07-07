@@ -67,6 +67,12 @@ const projects: Project[] = [
 		tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Elementor'],
 		url: 'https://gratitudeandlightcandles.ca',
 	},
+	{
+		name: 'Events API',
+		tags: ['Go'],
+		url: 'https://github.com/laurentcodes/go-events-api',
+		isGithub: true,
+	},
 ];
 
 export default function Projects() {
