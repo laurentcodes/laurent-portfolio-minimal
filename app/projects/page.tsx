@@ -20,6 +20,12 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		name: 'Events API',
+		tags: ['Go'],
+		url: 'https://github.com/laurentcodes/go-events-api',
+		isGithub: true,
+	},
+	{
 		name: 'TodoSide',
 		tags: ['JavaScript', 'HTML', 'CSS'],
 		url: 'https://todoside.netlify.app',
@@ -66,12 +72,6 @@ const projects: Project[] = [
 		name: 'Gratitude & Light Candles',
 		tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Elementor'],
 		url: 'https://gratitudeandlightcandles.ca',
-	},
-	{
-		name: 'Events API',
-		tags: ['Go'],
-		url: 'https://github.com/laurentcodes/go-events-api',
-		isGithub: true,
 	},
 ];
 
