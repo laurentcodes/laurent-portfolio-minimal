@@ -20,7 +20,7 @@ type Project = {
 
 const projects: Project[] = [
 	{
-		name: 'React Native Rich Toast',
+		name: 'react-native-rich-toast',
 		tags: ['React Native', 'TypeScript', 'NPM'],
 		url: 'https://github.com/laurentcodes/react-native-rich-toast',
 		isGithub: true,
