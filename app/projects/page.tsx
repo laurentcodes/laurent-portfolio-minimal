@@ -31,7 +31,7 @@ const projects: Project[] = [
 		url: 'https://form-builder-cyan.vercel.app/',
 	},
 	{
-		name: 'LMS',
+		name: 'Legislative Management System',
 		tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
 		url: 'https://lms-sand-psi.vercel.app',
 	},
