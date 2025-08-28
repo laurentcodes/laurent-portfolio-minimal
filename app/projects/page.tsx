@@ -20,6 +20,11 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		name: 'Form Builder',
+		tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma'],
+		url: 'https://form-builder-cyan.vercel.app/',
+	},
+	{
 		name: 'LMS',
 		tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
 		url: 'https://lms-sand-psi.vercel.app',
