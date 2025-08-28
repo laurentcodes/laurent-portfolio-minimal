@@ -20,6 +20,12 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		name: 'Events API',
+		tags: ['Go'],
+		url: 'https://github.com/laurentcodes/go-events-api',
+		isGithub: true,
+	},
+	{
 		name: 'Form Builder',
 		tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma'],
 		url: 'https://form-builder-cyan.vercel.app/',
