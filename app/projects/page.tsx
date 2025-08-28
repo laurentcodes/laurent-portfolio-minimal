@@ -20,6 +20,11 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		name: 'LMS',
+		tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+		url: 'https://lms-sand-psi.vercel.app',
+	},
+	{
 		name: 'TodoSide',
 		tags: ['JavaScript', 'HTML', 'CSS'],
 		url: 'https://todoside.netlify.app',
