@@ -16,12 +16,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html
-			lang='en'
-			className={cx(
-				'text-black bg-white dark:text-white dark:bg-black',
-				GeistSans.variable,
-				GeistMono.variable
+                <html
+                        lang='en'
+                        suppressHydrationWarning
+                        className={cx(
+                                'text-black bg-white dark:text-white dark:bg-black',
+                                GeistSans.variable,
+                                GeistMono.variable
 			)}
 		>
 			<body className='antialiased w-full max-w-2xl mx-auto px-4 mt-8'>

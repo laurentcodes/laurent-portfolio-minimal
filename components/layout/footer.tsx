@@ -1,3 +1,5 @@
+import ThemeToggle from './theme-toggle';
+
 function ArrowIcon() {
 	return (
 		<svg
@@ -17,35 +19,38 @@ function ArrowIcon() {
 }
 
 export default function Footer() {
-	return (
-		<footer className='mb-6 mt-8 md:mb-0 md:mt-4'>
-			<div className='p-4'>
-				<ul className='flex justify-center space-x-4 text-xs md:text-sm text-black dark:text-white'>
-					<li>
-						<a
-							className='flex items-center transition-colors hover:text-gray-600 dark:hover:text-gray-400 px-2 py-1'
-							rel='noopener noreferrer'
-							target='_blank'
-							href='/rss'
-						>
-							<ArrowIcon />
-							<span className='ml-2'>RSS</span>
-						</a>
-					</li>
+        return (
+                <footer className='mb-6 mt-8 md:mb-0 md:mt-4'>
+                        <div className='p-4'>
+                                <ul className='flex items-center justify-center space-x-4 text-xs md:text-sm text-black dark:text-white'>
+                                        <li>
+                                                <ThemeToggle />
+                                        </li>
+                                        <li>
+                                                <a
+                                                        className='flex items-center transition-colors hover:text-gray-600 dark:hover:text-gray-400 px-2 py-1'
+                                                        rel='noopener noreferrer'
+                                                        target='_blank'
+                                                        href='/rss'
+                                                >
+                                                        <ArrowIcon />
+                                                        <span className='ml-2'>RSS</span>
+                                                </a>
+                                        </li>
 
-					<li>
-						<a
-							className='flex items-center transition-colors hover:text-gray-600 dark:hover:text-gray-400 px-2 py-1'
-							rel='noopener noreferrer'
-							target='_blank'
-							href='https://github.com/laurentcodes'
-						>
-							<ArrowIcon />
-							<span className='ml-2'>GitHub</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-	);
+                                        <li>
+                                                <a
+                                                        className='flex items-center transition-colors hover:text-gray-600 dark:hover:text-gray-400 px-2 py-1'
+                                                        rel='noopener noreferrer'
+                                                        target='_blank'
+                                                        href='https://github.com/laurentcodes'
+                                                >
+                                                        <ArrowIcon />
+                                                        <span className='ml-2'>GitHub</span>
+                                                </a>
+                                        </li>
+                                </ul>
+                        </div>
+                </footer>
+        );
 }
