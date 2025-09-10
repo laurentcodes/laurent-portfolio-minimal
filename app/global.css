@@ -12,6 +12,11 @@
 	}
 }
 
+.dark ::selection {
+	background-color: #ffffff;
+	color: #000000;
+}
+
 :root {
 	--sh-class: #000000;
 	--sh-identifier: #000000;
@@ -36,6 +41,15 @@
 	html {
 		color-scheme: dark;
 	}
+}
+
+.dark {
+	--sh-class: #ffffff;
+	--sh-identifier: #ffffff;
+	--sh-keyword: #ffffff;
+	--sh-string: #ffffff;
+	--sh-comment: #999999;
+	color-scheme: dark;
 }
 
 html {
