@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { CustomMDX } from 'components/mdx';
 import { formatDate, getBlogPosts } from 'app/blog/utils';
 import { baseUrl } from 'app/sitemap';
@@ -39,11 +40,11 @@ export default function Blog({ params }) {
 
 	return (
 		<section>
-			<script
-				type='application/ld+json'
-				suppressHydrationWarning
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
+                        <script
+                                type='application/ld+json'
+                                suppressHydrationWarning
+                                dangerouslySetInnerHTML={{
+                                        __html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'BlogPosting',
 						headline: post.metadata.title,
@@ -59,13 +60,20 @@ export default function Blog({ params }) {
 							name: "Laurent's Portfolio",
 						},
 					}),
-				}}
-			/>
+                                }}
+                        />
+                        <Link
+                                href='/blog'
+                                className='inline-flex items-center mb-4 text-sm text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
+                        >
+                                <span aria-hidden='true' className='mr-1'>←</span>
+                                back
+                        </Link>
 
-			<div className='p-6 mb-8'>
-				<h1 className='font-semibold text-2xl tracking-tighter mb-4 text-black dark:text-white'>
-					{post.metadata.title}
-				</h1>
+                        <div className='p-6 mb-8'>
+                                <h1 className='font-semibold text-2xl tracking-tighter mb-4 text-black dark:text-white'>
+                                        {post.metadata.title}
+                                </h1>
 
 				<div className='flex items-center mb-6'>
 					<span className='text-xs px-2 py-1 text-black dark:text-white tabular-nums'>
