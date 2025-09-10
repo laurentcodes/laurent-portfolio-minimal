@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 	}));
 }
 
-export function generateMetadata({ params }) {
+export function generateMetadata({ params }: { params: { slug: string } }) {
 	let post = getBlogPosts().find((post) => post.slug === params.slug);
 
 	if (!post) {
@@ -31,7 +31,7 @@ export function generateMetadata({ params }) {
 	});
 }
 
-export default function Blog({ params }) {
+export default function Blog({ params }: { params: { slug: string } }) {
 	let post = getBlogPosts().find((post) => post.slug === params.slug);
 
 	if (!post) {
@@ -62,14 +62,13 @@ export default function Blog({ params }) {
 					}),
                                 }}
                         />
-                        <Link
-                                href='/blog'
-                                className='inline-flex items-center mb-4 text-sm text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
-                        >
-                                <span aria-hidden='true' className='mr-1'>←</span>
-                        >
-                                back
-                        </Link>
+			<Link
+				href='/blog'
+				className='inline-flex items-center mb-4 text-sm text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
+			>
+				<span aria-hidden='true' className='mr-1'>←</span>
+				back
+			</Link>
 
                         <div className='p-6 mb-8'>
                                 <h1 className='font-semibold text-2xl tracking-tighter mb-4 text-black dark:text-white'>
