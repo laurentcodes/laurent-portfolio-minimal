@@ -17,7 +17,7 @@ export function generateMetadata({ params }) {
   const post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {
-    return;
+    return notFound();
   }
 
   const { title, publishedAt: publishedTime, summary, image } = post.metadata;
