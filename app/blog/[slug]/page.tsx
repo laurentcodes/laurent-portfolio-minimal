@@ -67,6 +67,7 @@ export default function Blog({ params }) {
                                 className='inline-flex items-center mb-4 text-sm text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
                         >
                                 <span aria-hidden='true' className='mr-1'>←</span>
+                        >
                                 back
                         </Link>
 
