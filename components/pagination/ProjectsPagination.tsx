@@ -31,7 +31,7 @@ export default function ProjectsPagination({
           </Link>
         </h3>
         {project.isGithub && (
-          <span className='text-xs px-2 py-1 text-black dark:text-white'>
+          <span className='text-xs px-2.5 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded border border-gray-300 dark:border-gray-600 font-medium'>
             GitHub
           </span>
         )}
@@ -41,7 +41,7 @@ export default function ProjectsPagination({
         {project.tags.map((tag, i) => (
           <span
             key={i}
-            className='px-2 py-0.5 text-xs text-black dark:text-white'
+            className='px-3 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full'
           >
             {tag}
           </span>
