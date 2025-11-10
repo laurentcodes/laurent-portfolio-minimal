@@ -20,6 +20,18 @@ type Project = {
 
 const projects: Project[] = [
 	{
+		name: 'Subly API',
+		tags: ['Bun', 'Hono', 'PostgreSQL', 'TypeScript', 'Drizzle ORM'],
+		url: 'https://github.com/laurentcodes/subly-api',
+		isGithub: true,
+	},
+	{
+		name: 'Subly Mobile',
+		tags: ['React Native', 'Expo', 'TypeScript', 'NativeWind'],
+		url: 'https://github.com/laurentcodes/subly-mobile',
+		isGithub: true,
+	},
+	{
 		name: 'react-native-rich-toast',
 		tags: ['React Native', 'TypeScript', 'NPM'],
 		url: 'https://github.com/laurentcodes/react-native-rich-toast',
