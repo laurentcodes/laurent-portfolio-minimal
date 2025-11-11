@@ -41,7 +41,7 @@ export default function ProjectsPagination({
         {project.tags.map((tag, i) => (
           <span
             key={i}
-            className='px-2 py-0.5 text-xs text-black dark:text-white'
+            className='px-2 py-0.5 text-xs text-gray-600 dark:text-gray-400'
           >
             {tag}
           </span>
