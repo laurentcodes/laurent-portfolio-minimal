@@ -1,6 +1,6 @@
 # Laurent: Portfolio
 
-## Segun Olagunju
+## Laurent
 
 ### About Me
 
@@ -11,3 +11,7 @@ This is my portfolio site, feel free to reach to me anytime for opportunities th
 #### Link
 
 <https://laurentcodes.xyz>
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
