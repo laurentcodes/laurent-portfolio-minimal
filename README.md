@@ -1,6 +1,6 @@
 # Laurent: Portfolio
 
-## Segun Olagunju
+## Laurent
 
 ### About Me
 
