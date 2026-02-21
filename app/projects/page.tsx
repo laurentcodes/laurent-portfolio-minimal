@@ -32,6 +32,12 @@ const projects: Project[] = [
     isGithub: true,
   },
   {
+    name: 'Field Notes',
+    tags: ['React Native', 'Expo', 'Convex', 'TypeScript', 'SQLite'],
+    url: 'https://github.com/laurentcodes/field-notes',
+    isGithub: true,
+  },
+  {
     name: 'react-native-rich-toast',
     tags: ['React Native', 'TypeScript', 'NPM'],
     url: 'https://github.com/laurentcodes/react-native-rich-toast',
