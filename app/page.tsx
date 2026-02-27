@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { baseUrl } from 'app/sitemap';
 import { metadata } from 'utils/metadata';
 
@@ -13,9 +14,19 @@ export default function Page() {
   return (
     <section>
       <div className='p-6'>
-        <h1 className='mb-6 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
-          Laurent.
-        </h1>
+        <div className='flex items-center gap-4 mb-6'>
+          <Image
+            src='/notion-face.png'
+            alt='Laurent'
+            width={64}
+            height={64}
+            className='rounded-full'
+          />
+
+          <h1 className='text-2xl font-semibold tracking-tighter text-black dark:text-white'>
+            Laurent.
+          </h1>
+        </div>
 
         <div className='space-y-4 text-black dark:text-white mb-8'>
           <p>
