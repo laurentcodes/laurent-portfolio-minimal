@@ -37,7 +37,7 @@ const skillCategories: SkillCategory[] = [
         },
 	{
 		title: 'Backend Development',
-		skills: ['NestJS', 'Firebase', 'Express.js', 'Node.js', 'TypeScript'],
+		skills: ['NestJS', 'Firebase', 'Convex', 'Express.js', 'Node.js', 'TypeScript'],
 	},
 	{
 		title: 'Databases',
