@@ -20,6 +20,19 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: 'Asapuu Events',
+    tags: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Cloudflare Workers',
+      'Tailwind CSS',
+      'React Query',
+      'Zustand',
+    ],
+    url: 'https://events.asapuu.com/',
+  },
+  {
     name: 'Subly API',
     tags: ['Bun', 'Hono', 'PostgreSQL', 'TypeScript', 'Drizzle ORM'],
     url: 'https://github.com/laurentcodes/subly-api',
