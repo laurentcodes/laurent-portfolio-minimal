@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { baseUrl } from 'app/sitemap';
 
 // components
@@ -18,8 +17,20 @@ export function generateMetadata(): Metadata {
 
 const workExperience = [
   {
+    project: 'Asapuu',
+    company: 'Asapuu',
+    techStack: ['NestJS', 'TypeScript', 'Postgres'],
+    description:
+      'A platform that allows users to easily convert cryptocurrency to Naira, with instant transactions and a user-friendly interface.',
+    role: 'Worked primarily on the crypto side of the backend, building services for crypto purchase, conversion, and exchange rate handling.',
+    impact:
+      'Powered the core conversion experience that lets users swap crypto for fiat instantly and reliably.',
+    access: 'Publicly available',
+    url: 'https://asapuu.com',
+  },
+  {
     project: 'Asapuu Events',
-    company: 'Freelance',
+    company: 'Asapuu',
     techStack: [
       'React',
       'TypeScript',
