@@ -1,9 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { baseUrl } from 'app/sitemap';
-import { metadata } from 'utils/metadata';
+
+// components
 import ProjectsPagination from '../../components/pagination/ProjectsPagination';
 
-export function generateMetadata() {
+// utils
+import { metadata } from 'utils/metadata';
+
+export function generateMetadata(): Metadata {
   return metadata({
     title: 'Projects',
     description: 'Check out my projects.',
@@ -19,19 +24,6 @@ type Project = {
 };
 
 const projects: Project[] = [
-  {
-    name: 'Asapuu Events',
-    tags: [
-      'React',
-      'TypeScript',
-      'Vite',
-      'Cloudflare Workers',
-      'Tailwind CSS',
-      'React Query',
-      'Zustand',
-    ],
-    url: 'https://events.asapuu.com/',
-  },
   {
     name: 'Subly API',
     tags: ['Bun', 'Hono', 'PostgreSQL', 'TypeScript', 'Drizzle ORM'],
@@ -65,7 +57,7 @@ const projects: Project[] = [
   {
     name: 'Form Builder',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma'],
-    url: 'https://form-builder-cyan.vercel.app/',
+    url: 'https://form-builder-cyan.vercel.app',
   },
   {
     name: 'Legislative Management System',
@@ -80,12 +72,12 @@ const projects: Project[] = [
   {
     name: 'Natours Fullstack',
     tags: ['Node.js', 'Express', 'MongoDB', 'Pug'],
-    url: 'https://natours.laurentcodes.xyz/',
+    url: 'https://natours.laurentcodes.xyz',
   },
   {
     name: 'Natours Frontend',
     tags: ['HTML', 'CSS', 'SCSS'],
-    url: 'https://natours-front.laurentcodes.xyz/',
+    url: 'https://natours-front.laurentcodes.xyz',
   },
   {
     name: 'Currency Converter',
@@ -115,29 +107,24 @@ const projects: Project[] = [
     url: 'https://github.com/laurentcodes/tech-assessment-social-api',
     isGithub: true,
   },
-  {
-    name: 'Gratitude & Light Candles',
-    tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Elementor'],
-    url: 'https://gratitudeandlightcandles.ca',
-  },
 ];
 
 export default function Projects() {
   return (
     <section>
       <div className='p-6'>
-        <h1 className='mb-4 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
+        <h1 className='mb-4 text-2xl font-semibold tracking-tighter text-black [html.dark_&]:text-white'>
           Projects
         </h1>
 
-        <p className='mb-5 text-black dark:text-white text-sm'>
+        <p className='mb-5 text-black [html.dark_&]:text-white text-sm'>
           Here are some of my personal and open-source projects:
         </p>
 
         <ProjectsPagination projects={projects} itemsPerPage={5} />
 
         <Link
-          className='inline-flex items-center text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 text-sm font-medium underline px-2 py-1 transition-colors'
+          className='inline-flex items-center text-black [html.dark_&]:text-white hover:text-gray-600 [html.dark_&]:hover:text-gray-400 text-sm font-medium underline px-2 py-1 transition-colors'
           href='https://github.com/laurentcodes'
           target='_blank'
         >

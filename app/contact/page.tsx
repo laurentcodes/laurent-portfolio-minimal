@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { baseUrl } from 'app/sitemap';
+
+// utils
 import { metadata } from 'utils/metadata';
 
-export function generateMetadata() {
+export function generateMetadata(): Metadata {
 	return metadata({
 		title: 'Contact',
 		description: 'Contact me.',
@@ -40,11 +43,11 @@ export default function Contact() {
 	return (
 		<section>
 			<div className='p-6'>
-				<h1 className='mb-4 text-2xl font-semibold tracking-tighter text-black dark:text-white'>
+				<h1 className='mb-4 text-2xl font-semibold tracking-tighter text-black [html.dark_&]:text-white'>
 					Contact Me
 				</h1>
 
-				<p className='mb-5 text-black dark:text-white text-sm'>
+				<p className='mb-5 text-black [html.dark_&]:text-white text-sm'>
 					Have a great idea? Want to say hi? Feel free to contact me through any
 					of these channels:
 				</p>
@@ -53,7 +56,7 @@ export default function Contact() {
 					{contactMethods.map((method, index) => (
 						<div
 							key={index}
-							className='p-3 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200'
+							className='p-3 hover:text-gray-600 [html.dark_&]:hover:text-gray-400 transition-colors duration-200'
 						>
 							<Link
 								className='flex items-center hover:underline'

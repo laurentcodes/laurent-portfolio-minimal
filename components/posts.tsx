@@ -1,5 +1,8 @@
-import { getBlogPosts } from 'app/blog/utils';
+// components
 import BlogPostsPagination from './pagination/BlogPostsPagination';
+
+// utils
+import { getBlogPosts } from 'app/blog/utils';
 
 interface BlogPostsProps {
 	limit?: number;

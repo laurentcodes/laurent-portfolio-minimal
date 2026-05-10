@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+
+// components
 import PaginatedItems from './PaginatedItems';
 
 type Project = {
@@ -22,7 +24,7 @@ export default function ProjectsPagination({
   const renderProject = (project: Project, index: number) => (
     <div
       key={index}
-      className='p-4 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200'
+      className='p-4 hover:text-gray-600 [html.dark_&]:hover:text-gray-400 transition-colors duration-200'
     >
       <div className='flex items-center justify-between mb-2'>
         <h3 className='text-base font-medium'>
@@ -31,7 +33,7 @@ export default function ProjectsPagination({
           </Link>
         </h3>
         {project.isGithub && (
-          <span className='text-xs px-2 py-1 text-black dark:text-white'>
+          <span className='text-xs px-2 py-1 text-black [html.dark_&]:text-white'>
             GitHub
           </span>
         )}
@@ -41,7 +43,7 @@ export default function ProjectsPagination({
         {project.tags.map((tag, i) => (
           <span
             key={i}
-            className='px-2 py-0.5 text-xs text-black dark:text-white'
+            className='px-2 py-0.5 text-xs text-black [html.dark_&]:text-white'
           >
             {tag}
           </span>

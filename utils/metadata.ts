@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { baseUrl } from 'app/sitemap';
 
 export function metadata({
@@ -12,7 +13,7 @@ export function metadata({
 	publishedTime?: string;
 	url: string;
 	image?: string;
-}) {
+}): Metadata {
 	let ogImage = image
 		? image
 		: `${baseUrl}/og?title=${encodeURIComponent(

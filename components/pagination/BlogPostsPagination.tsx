@@ -1,8 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { formatDate } from '../../utils/dateFormatter';
+
+// components
 import PaginatedItems from './PaginatedItems';
+
+// utils
+import { formatDate } from '../../utils/dateFormatter';
 
 type BlogPost = {
 	slug: string;
@@ -27,14 +31,14 @@ export default function BlogPostsPagination({
 	const renderPost = (post: BlogPost, index: number) => (
 		<Link
 			key={post.slug}
-			className='block p-4 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200'
+			className='block p-4 hover:text-gray-600 [html.dark_&]:hover:text-gray-400 transition-colors duration-200'
 			href={`/blog/${post.slug}`}
 		>
 			<div className='flex flex-col space-y-2'>
 				<h3 className='text-base font-medium'>{post.metadata.title}</h3>
 
 				<div className='flex items-center'>
-					<span className='text-xs px-2 py-1 text-black dark:text-white tabular-nums'>
+					<span className='text-xs px-2 py-1 text-black [html.dark_&]:text-white tabular-nums'>
 						{formatDate(post.metadata.publishedAt, false)}
 					</span>
 				</div>

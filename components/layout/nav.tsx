@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+// components
+import { ThemeToggle } from './theme-toggle';
+
 const navItems = {
 	'/': {
 		name: 'Home',
@@ -29,11 +32,11 @@ export function Navbar() {
 
         return (
                 <>
-                        {/* Mobile navigation */}
+                        {/* mobile navigation */}
                         <aside className='mb-8 md:mb-12 md:hidden'>
                                 <div className='lg:sticky lg:top-20'>
                                         <nav className='p-2 overflow-x-auto'>
-                                                <div className='flex flex-row justify-center space-x-1 min-w-full'>
+                                                <div className='flex flex-row items-center justify-center space-x-1 min-w-full'>
                                                         {Object.entries(navItems).map(([path, { name }]) => {
                                                                 const isActive =
                                                                         pathname === path ||
@@ -49,19 +52,20 @@ export function Navbar() {
                                                                                 href={path}
                                                                                 className={`
                                                                                         transition-all duration-300 ease-out px-2 py-1.5 md:px-3 md:py-2 text-xs md:text-sm font-medium text-center whitespace-nowrap flex-1 transform hover:scale-105
-                                                                                        text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400
+                                                                                        text-black [html.dark_&]:text-white hover:text-gray-600 [html.dark_&]:hover:text-gray-400
                                                                                 `}
                                                                         >
                                                                                 {name}
                                                                         </Link>
                                                                 );
                                                         })}
+                                                        <ThemeToggle className='ml-1' />
                                                 </div>
                                         </nav>
                                 </div>
                         </aside>
 
-                        {/* Desktop navigation */}
+                        {/* desktop navigation */}
                         <nav className='hidden md:flex justify-center mb-12 space-x-4'>
                                 {Object.entries(navItems).map(([path, { name }]) => (
                                         <Link
@@ -71,8 +75,8 @@ export function Navbar() {
                                                         ${
                                                                 pathname === path ||
                                                                 (path === '/blog' && pathname.startsWith('/blog'))
-                                                                        ? 'text-black dark:text-white underline'
-                                                                        : 'text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
+                                                                        ? 'text-black [html.dark_&]:text-white underline'
+                                                                        : 'text-black [html.dark_&]:text-white hover:text-gray-600 [html.dark_&]:hover:text-gray-400'
                                                         }`}
                                         >
                                                 {name}

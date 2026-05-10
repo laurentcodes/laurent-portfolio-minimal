@@ -1,8 +1,13 @@
-import { BlogPosts } from 'components/posts';
+import type { Metadata } from 'next';
 import { baseUrl } from 'app/sitemap';
+
+// components
+import { BlogPosts } from 'components/posts';
+
+// utils
 import { metadata } from 'utils/metadata';
 
-export function generateMetadata() {
+export function generateMetadata(): Metadata {
 	return metadata({
 		title: 'Blog',
 		description: 'Read my blog.',
@@ -14,7 +19,7 @@ export default function Page() {
 	return (
 		<section>
 			<div className='p-6 mb-8'>
-				<h1 className='font-semibold text-2xl mb-8 tracking-tighter text-black dark:text-white'>
+				<h1 className='font-semibold text-2xl mb-8 tracking-tighter text-black [html.dark_&]:text-white'>
 					My Blog
 				</h1>
 

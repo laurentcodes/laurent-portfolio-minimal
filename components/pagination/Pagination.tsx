@@ -27,7 +27,7 @@ export default function Pagination({
         className={`px-3 py-1 transition-all duration-200 ease-out transform ${
           currentPage === 1
             ? 'text-gray-300 cursor-not-allowed'
-            : 'text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 cursor-pointer hover:scale-105'
+            : 'text-black [html.dark_&]:text-white hover:text-gray-600 [html.dark_&]:hover:text-gray-400 cursor-pointer hover:scale-105'
         }`}
       >
         Previous
@@ -40,8 +40,8 @@ export default function Pagination({
             onClick={() => paginate(i + 1)}
             className={`px-3 py-1 cursor-pointer transition-all duration-200 ease-out transform hover:scale-105 ${
               currentPage === i + 1
-                ? 'text-gray-600 dark:text-gray-400 font-medium'
-                : 'text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
+                ? 'text-gray-600 [html.dark_&]:text-gray-400 font-medium'
+                : 'text-black [html.dark_&]:text-white hover:text-gray-600 [html.dark_&]:hover:text-gray-400'
             }`}
           >
             {i + 1}
@@ -55,7 +55,7 @@ export default function Pagination({
         className={`px-3 py-1 transition-all duration-200 ease-out transform ${
           currentPage === totalPages
             ? 'text-gray-300 cursor-not-allowed'
-            : 'text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 cursor-pointer hover:scale-105'
+            : 'text-black [html.dark_&]:text-white hover:text-gray-600 [html.dark_&]:hover:text-gray-400 cursor-pointer hover:scale-105'
         }`}
       >
         Next

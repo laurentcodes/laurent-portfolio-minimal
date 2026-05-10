@@ -49,10 +49,10 @@ function RoundedImage(props) {
 }
 
 function Code({ children, className, ...props }) {
-	// Check if this is a code block (className will contain the language)
+	// check if this is a code block (classname will contain the language)
 	const isCodeBlock = className?.includes('language-');
 
-	// Extract language name for display if this is a code block
+	// extract language name for display if this is a code block
 	let language = '';
 	if (isCodeBlock && className) {
 		language = className.replace('language-', '');
@@ -62,20 +62,20 @@ function Code({ children, className, ...props }) {
 
 	if (isCodeBlock) {
 		return (
-			<div className='relative my-8 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-950 shadow-sm'>
+			<div className='relative my-8 overflow-hidden rounded-lg border border-gray-200 [html.dark_&]:border-gray-700 bg-gray-50 [html.dark_&]:bg-gray-950 shadow-sm'>
 				{language && (
-					<div className='absolute right-0 top-0 px-4 py-1 rounded-bl-lg text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-l border-b border-gray-200 dark:border-gray-700'>
+					<div className='absolute right-0 top-0 px-4 py-1 rounded-bl-lg text-xs font-medium bg-gray-200 [html.dark_&]:bg-gray-800 text-gray-700 [html.dark_&]:text-gray-300 border-l border-b border-gray-200 [html.dark_&]:border-gray-700'>
 						{language}
 					</div>
 				)}
 				<div className='px-4 pt-4 pb-2 flex items-center space-x-2'>
-					<div className='w-3 h-3 rounded-full bg-red-500'></div>
-					<div className='w-3 h-3 rounded-full bg-yellow-500'></div>
-					<div className='w-3 h-3 rounded-full bg-green-500'></div>
+					<div className='w-3 h-3 rounded-full bg-red-500' />
+					<div className='w-3 h-3 rounded-full bg-yellow-500' />
+					<div className='w-3 h-3 rounded-full bg-green-500' />
 				</div>
 
 				<pre
-					className='overflow-x-auto p-4 pt-2 text-sm border-t border-gray-200 dark:border-gray-800 dark:hidden'
+					className='overflow-x-auto p-4 pt-2 text-sm border-t border-gray-200 [html.dark_&]:border-gray-800 [html.dark_&]:hidden'
 					style={{
 						backgroundImage:
 							"linear-gradient(to bottom, rgba(249, 250, 251, 1) 0%, rgba(249, 250, 251, 0.8) 100%), url(\"data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.025' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H0V0h5z'/%3E%3C/g%3E%3C/svg%3E\")",
@@ -90,7 +90,7 @@ function Code({ children, className, ...props }) {
 				</pre>
 
 				<pre
-					className='overflow-x-auto p-4 pt-2 text-sm border-t border-gray-200 dark:border-gray-800 hidden dark:block'
+					className='overflow-x-auto p-4 pt-2 text-sm border-t border-gray-200 [html.dark_&]:border-gray-800 hidden [html.dark_&]:block'
 					style={{
 						backgroundImage:
 							"linear-gradient(to bottom, rgba(17, 24, 39, 1) 0%, rgba(17, 24, 39, 0.8) 100%), url(\"data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H0V0h5z'/%3E%3C/g%3E%3C/svg%3E\")",
@@ -99,7 +99,7 @@ function Code({ children, className, ...props }) {
 				>
 					<code
 						dangerouslySetInnerHTML={{ __html: codeHTML }}
-						className='font-mono dark:text-gray-200 block pl-4 border-l-4 border-blue-400/30 whitespace-pre'
+						className='font-mono [html.dark_&]:text-gray-200 block pl-4 border-l-4 border-blue-400/30 whitespace-pre'
 						{...props}
 					/>
 				</pre>
@@ -107,11 +107,11 @@ function Code({ children, className, ...props }) {
 		);
 	}
 
-	// If it's inline code
+	// if it's inline code
 	return (
 		<code
 			dangerouslySetInnerHTML={{ __html: codeHTML }}
-			className='font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 dark:text-gray-200'
+			className='font-mono bg-gray-100 [html.dark_&]:bg-gray-800 px-1.5 py-0.5 rounded text-gray-800 [html.dark_&]:text-gray-200'
 			{...props}
 		/>
 	);
@@ -121,11 +121,11 @@ function slugify(str) {
 	return str
 		.toString()
 		.toLowerCase()
-		.trim() // Remove whitespace from both ends of a string
-		.replace(/\s+/g, '-') // Replace spaces with -
-		.replace(/&/g, '-and-') // Replace & with 'and'
-		.replace(/[^\w\-]+/g, '') // Remove all non-word characters except for -
-		.replace(/\-\-+/g, '-'); // Replace multiple - with single -
+		.trim() // remove whitespace from both ends of a string
+		.replace(/\s+/g, '-') // replace spaces with -
+		.replace(/&/g, '-and-') // replace & with 'and'
+		.replace(/[^\w\-]+/g, '') // remove all non-word characters except for -
+		.replace(/\-\-+/g, '-'); // replace multiple - with single -
 }
 
 function createHeading(level) {
@@ -160,7 +160,7 @@ let components = {
 	Image: RoundedImage,
 	a: CustomLink,
 	code: Code,
-	pre: (props) => <div {...props} />, // This allows our Code component to handle the styling
+	pre: (props) => <div {...props} />, // this allows our code component to handle the styling
 	Table,
 };
 

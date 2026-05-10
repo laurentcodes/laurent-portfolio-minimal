@@ -5,11 +5,9 @@
   color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  ::selection {
-    background-color: #ffffff;
-    color: #000000;
-  }
+html.dark ::selection {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 :root {
@@ -24,21 +22,19 @@
   --sh-entity: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #ffffff;
-    --sh-identifier: #ffffff;
-    --sh-keyword: #ffffff;
-    --sh-string: #ffffff;
-    --sh-comment: #999999;
-  }
-
-  html {
-    color-scheme: dark;
-  }
+html.dark {
+  --sh-class: #ffffff;
+  --sh-identifier: #ffffff;
+  --sh-keyword: #ffffff;
+  --sh-string: #ffffff;
+  --sh-comment: #999999;
+  color: #ffffff;
+  color-scheme: dark;
+  background-color: #000000;
 }
 
 html {
+  color-scheme: light;
   min-width: 360px;
 }
 
@@ -63,8 +59,12 @@ html {
 }
 
 .prose .anchor:after {
-  @apply text-black dark:text-white;
+  @apply text-black;
   content: "#";
+}
+
+html.dark .prose .anchor:after {
+  @apply text-white;
 }
 
 .prose *:hover > .anchor {
@@ -72,11 +72,19 @@ html {
 }
 
 .prose pre {
-  @apply bg-white dark:bg-black overflow-x-auto py-2 px-3 text-sm;
+  @apply bg-white overflow-x-auto py-2 px-3 text-sm;
+}
+
+html.dark .prose pre {
+  @apply bg-black;
 }
 
 .prose code {
-  @apply px-1 py-0.5 bg-white dark:bg-black;
+  @apply px-1 py-0.5 bg-white;
+}
+
+html.dark .prose code {
+  @apply bg-black;
 }
 
 .prose pre code {
@@ -93,27 +101,36 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-black dark:text-white;
+  @apply my-4 text-black;
 }
 
 .prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2 text-black dark:text-white;
+  @apply text-4xl font-medium tracking-tight mt-6 mb-2 text-black;
 }
 
 .prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2 text-black dark:text-white;
+  @apply text-xl font-medium tracking-tight mt-6 mb-2 text-black;
 }
 
 .prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2 text-black dark:text-white;
+  @apply text-xl font-medium tracking-tight mt-6 mb-2 text-black;
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2 text-black dark:text-white;
+  @apply text-lg font-medium tracking-tight mt-6 mb-2 text-black;
 }
 
 .prose strong {
-  @apply font-medium text-black dark:text-white;
+  @apply font-medium text-black;
+}
+
+html.dark .prose p,
+html.dark .prose h1,
+html.dark .prose h2,
+html.dark .prose h3,
+html.dark .prose h4,
+html.dark .prose strong {
+  @apply text-white;
 }
 
 .prose ul {

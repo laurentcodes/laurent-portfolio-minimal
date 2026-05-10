@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+
+// components
 import PaginatedItems from './PaginatedItems';
 
 type WorkItem = {
@@ -26,7 +28,7 @@ export default function WorkPagination({
 	const renderWorkItem = (work: WorkItem, index: number) => (
 		<div
 			key={index}
-			className='flex flex-col space-y-3 p-6 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200'
+			className='flex flex-col space-y-3 p-6 hover:text-gray-600 [html.dark_&]:hover:text-gray-400 transition-colors duration-200'
 		>
 			<div className='pb-3 mb-2'>
 				<h2 className='text-xl font-medium'>
@@ -49,7 +51,7 @@ export default function WorkPagination({
 					{work.techStack.map((tech, i) => (
 						<span
 							key={i}
-							className='px-2 py-1 text-xs font-medium text-black dark:text-white'
+							className='px-2 py-1 text-xs font-medium text-black [html.dark_&]:text-white'
 						>
 							{tech}
 						</span>

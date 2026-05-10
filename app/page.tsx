@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { baseUrl } from 'app/sitemap';
+
+// utils
 import { metadata } from 'utils/metadata';
 
-export function generateMetadata() {
+export function generateMetadata(): Metadata {
   return metadata({
     title: "Laurent's Portfolio",
     description: 'Welcome to my Portfolio & Blog',
@@ -23,12 +26,12 @@ export default function Page() {
             className='rounded-full'
           />
 
-          <h1 className='text-2xl font-semibold tracking-tighter text-black dark:text-white'>
+          <h1 className='text-2xl font-semibold tracking-tighter text-black [html.dark_&]:text-white'>
             Laurent.
           </h1>
         </div>
 
-        <div className='space-y-4 text-black dark:text-white mb-8'>
+        <div className='space-y-4 text-black [html.dark_&]:text-white mb-8'>
           <p>
             I'm a Software Developer specializing in JavaScript and TypeScript,
             passionate about crafting innovative solutions through code.
@@ -50,7 +53,7 @@ export default function Page() {
             Have a look at my Resume{' '}
             <a
               href='https://drive.google.com/file/d/1i5PsHHYp0UFHelkmSGNLdoGPQyhUCuEP/view?usp=drive_link'
-              className='underline hover:text-gray-600 dark:hover:text-gray-400 px-1 transition-all duration-200 ease-out transform hover:scale-105'
+              className='underline hover:text-gray-600 [html.dark_&]:hover:text-gray-400 px-1 transition-all duration-200 ease-out transform hover:scale-105'
               target='_blank'
               rel='noopener'
             >

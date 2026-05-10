@@ -1,8 +1,13 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { CustomMDX } from 'components/mdx';
-import { formatDate, getBlogPosts } from 'app/blog/utils';
+import type { Metadata } from 'next';
 import { baseUrl } from 'app/sitemap';
+
+// components
+import { CustomMDX } from 'components/mdx';
+
+// utils
+import { formatDate, getBlogPosts } from 'app/blog/utils';
 import { metadata } from 'utils/metadata';
 
 export async function generateStaticParams() {
@@ -13,8 +18,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }) {
-  const post = getBlogPosts().find((post) => post.slug === params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPosts().find((post) => post.slug === slug);
 
   if (!post) {
     return notFound();
@@ -31,8 +41,13 @@ export function generateMetadata({ params }) {
   });
 }
 
-export default function Blog({ params }) {
-  const post = getBlogPosts().find((post) => post.slug === params.slug);
+export default async function Blog({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getBlogPosts().find((post) => post.slug === slug);
 
   if (!post) {
     notFound();
@@ -65,7 +80,7 @@ export default function Blog({ params }) {
 
       <Link
         href='/blog'
-        className='inline-flex items-center mb-4 text-sm text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400'
+        className='inline-flex items-center mb-4 text-sm text-black [html.dark_&]:text-white hover:text-gray-600 [html.dark_&]:hover:text-gray-400'
       >
         <span aria-hidden='true' className='mr-1'>
           ←
@@ -74,23 +89,23 @@ export default function Blog({ params }) {
       </Link>
 
       <div className='p-6 mb-8'>
-        <h1 className='font-semibold text-2xl tracking-tighter mb-4 text-black dark:text-white'>
+        <h1 className='font-semibold text-2xl tracking-tighter mb-4 text-black [html.dark_&]:text-white'>
           {post.metadata.title}
         </h1>
 
         <div className='flex items-center mb-6'>
-          <span className='text-xs px-2 py-1 text-black dark:text-white tabular-nums'>
+          <span className='text-xs px-2 py-1 text-black [html.dark_&]:text-white tabular-nums'>
             {formatDate(post.metadata.publishedAt, true, true)}
           </span>
         </div>
 
         {post.metadata.summary && (
-          <p className='text-sm text-black dark:text-white pl-3 py-1 mb-6 italic'>
+          <p className='text-sm text-black [html.dark_&]:text-white pl-3 py-1 mb-6 italic'>
             {post.metadata.summary}
           </p>
         )}
 
-        <article className='prose prose-black dark:prose-invert prose-pre:p-0 prose-pre:bg-transparent prose-pre:m-0 prose-pre:overflow-visible max-w-none text-black dark:text-white'>
+        <article className='prose prose-black [html.dark_&]:prose-invert prose-pre:p-0 prose-pre:bg-transparent prose-pre:m-0 prose-pre:overflow-visible max-w-none text-black [html.dark_&]:text-white'>
           <CustomMDX source={post.content} />
         </article>
       </div>
