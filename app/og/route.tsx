@@ -7,7 +7,11 @@ export async function GET(request: Request) {
   let title = url.searchParams.get('title') || 'Laurent.';
   let description =
     url.searchParams.get('description') || "Laurent's Portfolio";
-  let imageSrc = `${url.origin}/notion-face.png`;
+
+  // fetch the image and inline it — edge runtime can't always resolve same-origin URLs reliably
+  let imageRes = await fetch(new URL('/notion-face.png', url.origin));
+  let imageBuffer = await imageRes.arrayBuffer();
+  let imageSrc = `data:image/png;base64,${Buffer.from(imageBuffer).toString('base64')}`;
 
   return new ImageResponse(
     <div tw='flex flex-col w-full h-full justify-center bg-black'>
