@@ -33,7 +33,7 @@ export default function Page() {
 
         <div className='space-y-4 text-black [html.dark_&]:text-white mb-8'>
           <p>
-            I'm a Software Developer specializing in JavaScript and TypeScript,
+            I'm a Software Developer specializing in TypeScript,
             passionate about crafting innovative solutions through code.
           </p>
 
