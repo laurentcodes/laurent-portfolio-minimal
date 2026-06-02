@@ -17,16 +17,16 @@ export function generateMetadata(): Metadata {
 
 const workExperience = [
   {
-    project: 'Asapuu',
-    company: 'Asapuu',
-    techStack: ['NestJS', 'TypeScript', 'Postgres'],
+    project: 'CyberSync Hub',
+    company: 'Freelance',
+    techStack: ['WordPress', 'PHP', 'Elementor', 'JavaScript', 'CSS'],
     description:
-      'A platform that allows users to easily convert cryptocurrency to Naira, with instant transactions and a user-friendly interface.',
-    role: 'Worked primarily on the crypto side of the backend, building services for crypto purchase, conversion, and exchange rate handling.',
+      'A London-based cybersecurity consultancy offering cyber security consultancy, GRC advisory, managed security services, infrastructure services, and training programs for businesses and individuals.',
+    role: 'Built the marketing site end-to-end as a freelance engagement, designing custom layouts in Elementor, structuring service and training pages, and integrating the blog.',
     impact:
-      'Powered the core conversion experience that lets users swap crypto for fiat instantly and reliably.',
+      "Established a professional web presence that showcases CyberSync Hub's services, expertise, and educational content to prospective clients and trainees.",
     access: 'Publicly available',
-    url: 'https://asapuu.com',
+    url: 'https://cybersynchub.org',
   },
   {
     project: 'Asapuu Events',
@@ -58,6 +58,18 @@ const workExperience = [
       "Established the brand's online presence and enabled direct-to-consumer sales through a polished storefront.",
     access: 'Publicly available',
     url: 'https://gratitudeandlightcandles.ca',
+  },
+  {
+    project: 'Asapuu',
+    company: 'Asapuu',
+    techStack: ['NestJS', 'TypeScript', 'Postgres'],
+    description:
+      'A platform that allows users to easily convert cryptocurrency to Naira, with instant transactions and a user-friendly interface.',
+    role: 'Worked primarily on the crypto side of the backend, building services for crypto purchase, conversion, and exchange rate handling.',
+    impact:
+      'Powered the core conversion experience that lets users swap crypto for fiat instantly and reliably.',
+    access: 'Publicly available',
+    url: 'https://asapuu.com',
   },
   {
     project: 'Stayfindar',
