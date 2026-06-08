@@ -25,6 +25,11 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: 'Nigeria Personal PAYE Tax Calculator',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Router'],
+    url: 'https://tax.laurentcodes.xyz/',
+  },
+  {
     name: 'Subly API',
     tags: ['Bun', 'Hono', 'PostgreSQL', 'TypeScript', 'Drizzle ORM'],
     url: 'https://github.com/laurentcodes/subly-api',
