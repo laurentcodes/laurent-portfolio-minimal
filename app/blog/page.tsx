@@ -23,7 +23,7 @@ export default function Page() {
 					My Blog
 				</h1>
 
-				<BlogPosts limit={100} postsPerPage={3} />
+				<BlogPosts limit={100} postsPerPage={5} />
 			</div>
 		</section>
 	);
