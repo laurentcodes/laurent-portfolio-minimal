@@ -48,6 +48,30 @@ function RoundedImage(props) {
 	return <Image alt={props.alt} className='rounded-lg' {...props} />;
 }
 
+type DefinitionProps = {
+	term: string;
+	partOfSpeech: string;
+	definition: string;
+};
+
+function Definition({ term, partOfSpeech, definition }: DefinitionProps) {
+	return (
+		<aside className='not-prose my-8 rounded-md bg-zinc-100/80 px-5 py-5 text-black shadow-sm [html.dark_&]:bg-white/[0.07] [html.dark_&]:text-white'>
+			<div className='mb-3 flex items-baseline gap-3'>
+				<span className='font-mono text-2xl font-medium leading-none'>
+					{term}
+				</span>
+				<span className='text-sm italic text-black/55 [html.dark_&]:text-white/55'>
+					{partOfSpeech}
+				</span>
+			</div>
+			<div className='max-w-[58ch] text-sm leading-7 text-black/75 [html.dark_&]:text-white/75'>
+				{definition}
+			</div>
+		</aside>
+	);
+}
+
 function Code({ children, className, ...props }) {
 	// check if this is a code block (classname will contain the language)
 	const isCodeBlock = className?.includes('language-');
@@ -158,6 +182,7 @@ let components = {
 	h5: createHeading(5),
 	h6: createHeading(6),
 	Image: RoundedImage,
+	Definition,
 	a: CustomLink,
 	code: Code,
 	pre: (props) => <div {...props} />, // this allows our code component to handle the styling
