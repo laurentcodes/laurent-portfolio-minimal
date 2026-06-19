@@ -25,6 +25,11 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: 'DinaSend',
+    tags: ['Bun', 'Hono', 'PostgreSQL', 'Drizzle ORM', 'Redis', 'BullMQ', 'React', 'TypeScript'],
+    url: 'https://dinasend.com',
+  },
+  {
     name: 'Nigeria Personal PAYE Tax Calculator',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Router'],
     url: 'https://tax.laurentcodes.xyz/',
