@@ -40,17 +40,15 @@ export default function RootLayout({
 				GeistMono.variable
 			)}
 		>
-			<body className='antialiased w-full min-h-svh max-w-2xl mx-auto px-4 mt-8 flex flex-col'>
+			<body className='antialiased w-full max-w-2xl mx-auto px-4 mt-8'>
 				<Script id='theme-init' strategy='beforeInteractive'>
 					{themeScript}
 				</Script>
 
 				<ThemeToggle className='fixed right-4 top-4 z-50 hidden md:flex' />
-				<main className='flex-1 min-w-0 mt-6 flex flex-col'>
+				<main className='flex-auto min-w-0 mt-6 flex flex-col'>
 					<Navbar />
-					<div className='flex-1 flex flex-col justify-center'>
-						{children}
-					</div>
+					{children}
 					<Footer />
 				</main>
 			</body>
