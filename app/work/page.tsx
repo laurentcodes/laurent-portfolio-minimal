@@ -48,6 +48,18 @@ const workExperience = [
     url: 'https://events.asapuu.com',
   },
   {
+    project: 'Senator Wasiu Eshilokun Sanni',
+    company: 'Freelance',
+    techStack: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
+    description:
+      "The official website for Senator Wasiu Eshilokun Sanni, representing Lagos Central in Nigeria's 10th National Assembly, presenting his legislative platform and constituent services.",
+    role: 'Built a custom WordPress theme end-to-end as a freelance engagement, structuring the biography, portfolio, programs, and blog sections.',
+    impact:
+      "Established a professional public presence showcasing the senator's legislative work, policy focus areas, and constituent empowerment programs.",
+    access: 'Publicly available',
+    url: 'https://wasiueshilokun.org',
+  },
+  {
     project: 'Gratitude & Light Candles',
     company: 'Freelance',
     techStack: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Elementor'],
