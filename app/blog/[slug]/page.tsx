@@ -7,7 +7,8 @@ import { baseUrl } from 'app/sitemap';
 import { CustomMDX } from 'components/mdx';
 
 // utils
-import { formatDate, getBlogPosts } from 'app/blog/utils';
+import { getBlogPosts } from 'app/blog/utils';
+import { formatDate } from 'utils/dateFormatter';
 import { metadata } from 'utils/metadata';
 
 export async function generateStaticParams() {
@@ -95,7 +96,7 @@ export default async function Blog({
 
         <div className='flex items-center mb-6'>
           <span className='text-xs px-2 py-1 text-black [html.dark_&]:text-white tabular-nums'>
-            {formatDate(post.metadata.publishedAt, true, true)}
+            {formatDate(post.metadata.publishedAt)}
           </span>
         </div>
 

@@ -1,8 +1,20 @@
-import { baseUrl } from 'app/sitemap'
-import { getBlogPosts } from 'app/blog/utils'
+import { baseUrl } from 'app/sitemap';
+import { getBlogPosts } from 'app/blog/utils';
+
+const xmlEntities: Record<string, string> = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&apos;',
+};
+
+function escapeXml(value: string) {
+  return value.replace(/[&<>"']/g, (character) => xmlEntities[character]);
+}
 
 export async function GET() {
-  let allBlogs = await getBlogPosts()
+  const allBlogs = getBlogPosts();
 
   const itemsXml = allBlogs
     .sort((a, b) => {
@@ -14,15 +26,15 @@ export async function GET() {
     .map(
       (post) =>
         `<item>
-          <title>${post.metadata.title}</title>
-          <link>${baseUrl}/blog/${post.slug}</link>
-          <description>${post.metadata.summary || ''}</description>
+          <title>${escapeXml(post.metadata.title)}</title>
+          <link>${escapeXml(`${baseUrl}/blog/${post.slug}`)}</link>
+          <description>${escapeXml(post.metadata.summary ?? '')}</description>
           <pubDate>${new Date(
             post.metadata.publishedAt
           ).toUTCString()}</pubDate>
         </item>`
     )
-    .join('\n')
+    .join('\n');
 
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">
@@ -32,11 +44,11 @@ export async function GET() {
         <description>This is my portfolio RSS feed</description>
         ${itemsXml}
     </channel>
-  </rss>`
+  </rss>`;
 
   return new Response(rssFeed, {
     headers: {
-      'Content-Type': 'text/xml',
+      'Content-Type': 'application/rss+xml; charset=utf-8',
     },
-  })
+  });
 }

@@ -39,7 +39,7 @@ export default function BlogPostsPagination({
 
 				<div className='flex items-center'>
 					<span className='text-xs px-2 py-1 text-black [html.dark_&]:text-white tabular-nums'>
-						{formatDate(post.metadata.publishedAt, false)}
+						{formatDate(post.metadata.publishedAt)}
 					</span>
 				</div>
 
