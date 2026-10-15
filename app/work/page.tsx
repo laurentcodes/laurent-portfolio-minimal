@@ -17,6 +17,26 @@ export function generateMetadata(): Metadata {
 
 const workExperience = [
   {
+    project: 'Daily Soccer',
+    company: 'Codeva',
+    techStack: [
+      'NestJS',
+      'TypeScript',
+      'Bun',
+      'PostgreSQL',
+      'Drizzle ORM',
+      'Redis',
+      'BullMQ',
+    ],
+    description:
+      'A subscription service that delivers curated SportyBet betting codes to web and mobile-network subscribers, with subscriber accounts, selectable email/SMS delivery, and carrier billing integration.',
+    role: 'Worked on the backend, building the API with authentication, subscription plans and payments, MNO subscription callbacks, code management and delivery, a referral programme for field agents, and admin tooling with role-based access.',
+    impact:
+      'Powered the full subscription lifecycle, letting subscribers receive codes reliably on their preferred channel while giving administrators complete control over codes, plans, and the referral programme.',
+    access: 'Publicly available',
+    url: 'https://dailysoccercodes.com',
+  },
+  {
     project: 'CyberSync Hub',
     company: 'Freelance',
     techStack: ['WordPress', 'PHP', 'Elementor', 'JavaScript', 'CSS'],
