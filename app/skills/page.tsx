@@ -26,7 +26,6 @@ const skillCategories: SkillCategory[] = [
     title: 'Frontend Development',
     skills: [
       'HTML & CSS',
-      'Javascript',
       'Typescript',
       'React.js',
       'Next.js',
@@ -37,7 +36,6 @@ const skillCategories: SkillCategory[] = [
       'Astro',
       'Tailwind',
       'Bootstrap',
-      'shadcn/ui',
       'Motion',
     ],
   },
