@@ -18,7 +18,6 @@ export function generateMetadata(): Metadata {
 const workExperience = [
   {
     project: 'Daily Soccer',
-    company: 'Codeva',
     techStack: [
       'NestJS',
       'TypeScript',
@@ -38,7 +37,6 @@ const workExperience = [
   },
   {
     project: 'CyberSync Hub',
-    company: 'Freelance',
     techStack: ['WordPress', 'PHP', 'Elementor', 'JavaScript', 'CSS'],
     description:
       'A London-based cybersecurity consultancy offering cyber security consultancy, GRC advisory, managed security services, infrastructure services, and training programs for businesses and individuals.',
@@ -69,7 +67,6 @@ const workExperience = [
   },
   {
     project: 'Senator Wasiu Eshilokun Sanni',
-    company: 'Freelance',
     techStack: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
     description:
       "The official website for Senator Wasiu Eshilokun Sanni, representing Lagos Central in Nigeria's 10th National Assembly, presenting his legislative platform and constituent services.",
@@ -81,7 +78,6 @@ const workExperience = [
   },
   {
     project: 'Gratitude & Light Candles',
-    company: 'Freelance',
     techStack: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Elementor'],
     description:
       'An e-commerce site for a candle brand showcasing their product catalog and enabling online purchases.',

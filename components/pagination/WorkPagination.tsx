@@ -7,7 +7,7 @@ import PaginatedItems from './PaginatedItems';
 
 type WorkItem = {
 	project: string;
-	company: string;
+	company?: string;
 	techStack: string[];
 	description: string;
 	role: string;
@@ -41,9 +41,11 @@ export default function WorkPagination({
 					)}
 				</h2>
 
-				<p className='text-sm mt-1'>
-					<span className='font-medium'>Company:</span> {work.company}
-				</p>
+				{work.company ? (
+					<p className='text-sm mt-1'>
+						<span className='font-medium'>Company:</span> {work.company}
+					</p>
+				) : null}
 			</div>
 
 			<div className='flex flex-col space-y-3'>
