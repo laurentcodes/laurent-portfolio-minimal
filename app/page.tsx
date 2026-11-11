@@ -53,7 +53,7 @@ export default function Page() {
           <p className='font-semibold'>
             Have a look at my Resume{' '}
             <a
-              href='https://drive.google.com/file/d/1i5PsHHYp0UFHelkmSGNLdoGPQyhUCuEP/view?usp=drive_link'
+              href='https://drive.google.com/file/d/1olBMmP6quF7-SFC-jG3jemTwr8-VtPA1/view?usp=drive_link'
               className='underline hover:text-gray-600 [html.dark_&]:hover:text-gray-400 px-1 transition-all duration-200 ease-out transform hover:scale-105'
               target='_blank'
               rel='noopener'
