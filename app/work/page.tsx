@@ -17,6 +17,24 @@ export function generateMetadata(): Metadata {
 
 const workExperience = [
   {
+    project: 'Codeva',
+    techStack: [
+      'Next.js',
+      'TypeScript',
+      'React Native',
+      'Node.js',
+      'PostgreSQL',
+      'Docker',
+    ],
+    description:
+      'A technology delivery firm that designs, builds, deploys, and supports the software, cloud systems, and workplace technology companies depend on, with experience across finance, digital services, and advertising.',
+    role: 'Lead Engineer since December 2025, leading technical delivery of web and mobile products and the cloud foundations behind them, from architecture and implementation through launch and ongoing operations.',
+    impact:
+      'Helping client teams move from business requirements to dependable products and infrastructure, with continuity from build through day-to-day operation.',
+    access: 'Publicly available',
+    url: 'https://thecodeva.com',
+  },
+  {
     project: 'Daily Soccer',
     techStack: [
       'NestJS',
