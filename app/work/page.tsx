@@ -10,7 +10,7 @@ import { metadata } from 'utils/metadata';
 export function generateMetadata(): Metadata {
   return metadata({
     title: 'Work',
-    description: "Professional projects I've contributed to.",
+    description: 'Personal projects and current work.',
     url: `${baseUrl}/work`,
   });
 }
@@ -35,195 +35,101 @@ const workExperience = [
     url: 'https://thecodeva.com',
   },
   {
-    project: 'Daily Soccer',
+    project: 'DinaSend',
     techStack: [
-      'NestJS',
       'TypeScript',
+      'Hono',
       'Bun',
       'PostgreSQL',
-      'Drizzle ORM',
       'Redis',
-      'BullMQ',
+      'AWS SES',
     ],
     description:
-      'A subscription service that delivers curated SportyBet betting codes to web and mobile-network subscribers, with subscriber accounts, selectable email/SMS delivery, and carrier billing integration.',
-    role: 'Worked on the backend, building the API with authentication, subscription plans and payments, MNO subscription callbacks, code management and delivery, a referral programme for field agents, and admin tooling with role-based access.',
+      'A transactional-only email API for product mail such as verification, password resets, receipts, and alerts, sent through a REST API and an official SDK, with no campaigns or lists.',
+    role: 'Founder, building the REST API, the official SDK, and the product surface for sending and tracking transactional email.',
     impact:
-      'Powered the full subscription lifecycle, letting subscribers receive codes reliably on their preferred channel while giving administrators complete control over codes, plans, and the referral programme.',
-    access: 'Publicly available',
-    url: 'https://dailysoccercodes.com',
+      'Gives product teams a dedicated path for verification, password resets, receipts, and alerts without campaign or list tooling.',
+    access: 'Publicly available. Docs at https://docs.dinasend.com.',
+    url: 'https://dinasend.com',
   },
   {
-    project: 'CyberSync Hub',
-    techStack: ['WordPress', 'PHP', 'Elementor', 'JavaScript', 'CSS'],
-    description:
-      'A London-based cybersecurity consultancy offering cyber security consultancy, GRC advisory, managed security services, infrastructure services, and training programs for businesses and individuals.',
-    role: 'Built the marketing site end-to-end as a freelance engagement, designing custom layouts in Elementor, structuring service and training pages, and integrating the blog.',
-    impact:
-      "Established a professional web presence that showcases CyberSync Hub's services, expertise, and educational content to prospective clients and trainees.",
-    access: 'Publicly available',
-    url: 'https://cybersynchub.org',
-  },
-  {
-    project: 'Asapuu Events',
-    company: 'Asapuu',
+    project: 'Nigeria Tax Calculator',
     techStack: [
       'React',
       'TypeScript',
-      'Vite',
+      'TanStack Start',
+      'TanStack Router',
       'Tailwind CSS',
-      'React Query',
-      'Zustand',
     ],
     description:
-      'An events platform focused on event discovery and ticket purchase/payment, providing attendees with a fast, modern interface to find events and complete checkout.',
-    role: 'Built the frontend as a freelance engagement, implementing the event discovery flows, ticket selection, and payment checkout experience with responsive, performant UI.',
+      'A personal PAYE calculator based on the Nigeria Tax Act 2025, effective 1 January 2026. It covers personal tax only.',
+    role: 'Built and published the calculator as a personal project.',
     impact:
-      'Delivered a production-ready ticketing experience that streamlined event discovery and made ticket purchases seamless for attendees.',
+      'Puts the Nigeria Tax Act 2025 personal PAYE rules into a public web app ahead of the 1 January 2026 effective date.',
     access: 'Publicly available',
-    url: 'https://events.asapuu.com',
+    url: 'https://nigeria-tax-calculator-one.vercel.app',
   },
   {
-    project: 'Senator Wasiu Eshilokun Sanni',
-    techStack: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
-    description:
-      "The official website for Senator Wasiu Eshilokun Sanni, representing Lagos Central in Nigeria's 10th National Assembly, presenting his legislative platform and constituent services.",
-    role: 'Built a custom WordPress theme end-to-end as a freelance engagement, structuring the biography, portfolio, programs, and blog sections.',
-    impact:
-      "Established a professional public presence showcasing the senator's legislative work, policy focus areas, and constituent empowerment programs.",
-    access: 'Publicly available',
-    url: 'https://wasiueshilokun.org',
-  },
-  {
-    project: 'Gratitude & Light Candles',
-    techStack: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Elementor'],
-    description:
-      'An e-commerce site for a candle brand showcasing their product catalog and enabling online purchases.',
-    role: 'Built the site end-to-end as a freelance engagement, customizing the WordPress theme, designing the layout in Elementor, and integrating commerce features.',
-    impact:
-      "Established the brand's online presence and enabled direct-to-consumer sales through a polished storefront.",
-    access: 'Publicly available',
-    url: 'https://gratitudeandlightcandles.ca',
-  },
-  {
-    project: 'Asapuu',
-    company: 'Asapuu',
-    techStack: ['NestJS', 'TypeScript', 'Postgres'],
-    description:
-      'A platform that allows users to easily convert cryptocurrency to Naira, with instant transactions and a user-friendly interface.',
-    role: 'Worked primarily on the crypto side of the backend, building services for crypto purchase, conversion, and exchange rate handling.',
-    impact:
-      'Powered the core conversion experience that lets users swap crypto for fiat instantly and reliably.',
-    access: 'Publicly available',
-    url: 'https://asapuu.com',
-  },
-  {
-    project: 'Stayfindar',
-    company: 'Digicomme',
-    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    description:
-      'A modern accommodation booking platform that connects travelers with unique stays worldwide. Stayfindar streamlines the property discovery and booking process with an intuitive user interface and robust search functionality.',
-    role: 'Led the entire project development to deployment, architecting the frontend infrastructure, implementing responsive design patterns, and optimizing user experience across all device types.',
-    impact:
-      'Created a comprehensive booking platform that simplifies accommodation search and reservation processes, providing travelers with seamless access to diverse lodging options.',
-    access: 'Publicly available',
-    url: 'https://stayfindar.com',
-  },
-  {
-    project: 'ValuePlus Agency Landing Page',
-    company: 'Nitax Tech',
-    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    description:
-      'A modern landing page for ValuePlus Agency, the #1 Mobile affiliate & Ads Network for mVas.',
-    role: 'Developed responsive frontend components and optimized site performance.',
-    impact:
-      "Created a professional web presence that effectively showcases the company's services for both advertisers and affiliates.",
-    access: 'Publicly available',
-    url: 'https://www.valueplusagency.com/',
-  },
-  {
-    project: 'ValuePlus Agency Dashboard',
-    company: 'Nitax Tech',
-    techStack: ['Next.js', 'TypeScript', 'Daisy UI', 'Tailwind'],
-    description:
-      'An internal dashboard for managing campaigns, tracking affiliate performance, and monitoring advertising metrics.',
-    role: 'Designed and implemented the UI, integrated backend APIs, and built data visualization components.',
-    impact:
-      'Streamlined campaign management and provided real-time analytics for better decision making.',
-    access: 'Internal platform with login access',
-    url: 'https://dashboard.valueplusagency.com/',
-  },
-  {
-    project: 'LearnBeta',
-    company: 'Nitax Tech',
-    techStack: ['Next.js', 'Tailwind CSS', 'Tanstack Query', 'Mantine'],
-    description:
-      'An educational platform offering online courses and learning resources for students.',
-    role: 'Optimized application performance, fixed critical bugs, and implemented new features to enhance the overall user experience.',
-    impact:
-      'Enhanced learning accessibility for students through an intuitive digital platform.',
-    access: 'Publicly available',
-    url: 'https://learnbeta.ng',
-  },
-  {
-    project: 'BetaCare',
-    company: 'Nitax Tech',
+    project: 'Form Builder',
     techStack: [
       'Next.js',
       'TypeScript',
-      'Redux',
-      'Tailwind CSS',
-      'Material UI',
-      'Socket.io',
+      'Prisma',
+      'PostgreSQL',
+      'Clerk',
+      'dnd-kit',
     ],
     description:
-      'A healthcare platform providing medical services, consultation, and health information.',
-    role: 'Enhanced existing codebase by optimizing performance, troubleshooting critical issues, and implementing new healthcare-focused features.',
+      'A web app for creating, publishing, and sharing forms and collecting submissions, with drag-and-drop editing and signed-in accounts.',
+    role: 'Built the app as a personal project, including the drag-and-drop editor, publish and share flow, submission storage, and Clerk authentication.',
     impact:
-      'Improved access to healthcare services and information for patients.',
-    access: 'Publicly available',
-    url: 'https://betacare.ng/',
+      'Lets a signed-in user assemble a form, publish it on a share link, and keep the submissions that come back.',
+    access:
+      'Source is public. The live deploy is currently unavailable, so this entry links to the repository.',
+    url: 'https://github.com/laurentcodes/form-builder',
   },
   {
-    project: 'EDOHIS Aggregators Portal',
-    company: 'Digicomme',
-    techStack: ['React', 'Redux', 'Bootstrap'],
-    description:
-      'A portal for the Edo State Health Insurance Scheme that allows aggregators to manage enrollments and view analytics.',
-    role: 'Improved the existing portal by enhancing frontend performance and resolving third party integration issues.',
-    impact:
-      'Streamlined the health insurance enrollment process and improved data management for agents.',
-    access: 'Platform with login access',
-    url: 'https://agent.edhicadmin.org/',
-  },
-  {
-    project: 'EDOHIS Insurance Management Portal',
-    company: 'Digicomme',
+    project: 'Gym Management',
     techStack: [
-      'React',
       'TypeScript',
-      'Zustand',
-      'Tailwind',
-      'Shadcn',
-      'Tanstack Query',
+      'Bun',
+      'Next.js',
+      'Hono',
+      'PostgreSQL',
+      'Drizzle',
+      'Paystack',
+      'Cloudflare R2',
     ],
     description:
-      'A comprehensive management system for the Edo State Health Insurance Scheme that handles enrollments, claims, and benefits management.',
-    role: 'Led frontend development, implemented complex workflows, and optimized data handling for large datasets.',
+      'A Bun monorepo for gym operations: a Next.js web app, a Hono API, background workers, and an internal control plane, with PostgreSQL and Drizzle, Paystack payments, and Cloudflare R2 storage.',
+    role: 'Building the workspace as a personal project, across the web app, API, workers, and control plane.',
     impact:
-      'Digitized the entire insurance management process, reducing processing time and improving accuracy.',
-    access: 'Internal system, not publicly accessible.',
+      'Keeps gym operations, payments, and file storage in one codebase that runs locally, with no public deploy.',
+    access: 'Source is public, with no live demo.',
+    url: 'https://github.com/laurentcodes/gym-management',
   },
   {
-    project: 'EDOHIS Benefits Management System',
-    company: 'Digicomme',
-    techStack: ['React', 'Redux', 'Bootstrap'],
+    project: 'Zeron',
+    techStack: ['Rust'],
     description:
-      'A system for managing healthcare benefits, coverage details, and claims processing for the Edo State Health Insurance Scheme.',
-    role: 'Enhanced the existing system by optimizing performance, fixing UI/UX issues, and implementing additional modules to help the users perform their duties better.',
+      'An open-source native control plane for coding agents. It runs locally by default, with optional multi-device sync.',
+    role: 'Contributor, not a lead. Merged Antigravity ACP support with context UI and window geometry persistence (https://github.com/zeronsh/zeron/pull/349), restored Antigravity detection and updates (https://github.com/zeronsh/zeron/pull/617), and Cursor Plus model defaults (https://github.com/zeronsh/zeron/pull/920).',
     impact:
-      'Improved transparency of healthcare benefits and streamlined the claims processing workflow.',
-    access: 'Internal system, not publicly accessible.',
+      'Those merged changes added Antigravity support, later restored its detection and updates, and sent Cursor Plus model defaults with requests.',
+    access: 'Publicly available',
+    url: 'https://zeron.sh',
+  },
+  {
+    project: 'react-native-rich-toast',
+    techStack: ['React Native', 'TypeScript'],
+    description:
+      'A published npm package (v1.2.0): a Sonner-style toast API over react-native-toast-message, with rich color variants and optional queueing.',
+    role: 'Author of the package, published on npm.',
+    impact:
+      'Gives React Native apps a short API for success, error, info, and warning toasts, with optional rich colors and a queue.',
+    access:
+      'Published on npm. Repository at https://github.com/laurentcodes/react-native-rich-toast. Snack demo at https://snack.expo.dev/@stlaurent/react-native-rich-toast.',
+    url: 'https://www.npmjs.com/package/react-native-rich-toast',
   },
 ];
 
@@ -237,11 +143,11 @@ export default function Work() {
 
         <div className='mb-8 prose [html.dark_&]:prose-invert'>
           <p className='text-black [html.dark_&]:text-white'>
-            Below is a selection of professional projects I've worked on
-            throughout my career. This portfolio includes both projects I've
-            built from scratch and existing systems I've taken over to improve
-            and maintain. Each project showcases different aspects of my
-            technical skills and problem-solving approach.
+            Below is a selection of personal projects and my current work. It
+            includes products I have built from scratch, open-source
+            contributions, and a published package, alongside my current role.
+            Each entry shows a different part of how I design and ship
+            software.
           </p>
         </div>
 
@@ -249,7 +155,16 @@ export default function Work() {
 
         <div className='mt-8 mb-4'>
           <p className='text-black [html.dark_&]:text-white'>
-            Additional work details available upon request.
+            Full employer history is in my{' '}
+            <a
+              href='https://drive.google.com/file/d/1NOI7ZdxX6Ni_M-TSKqDKu2XlGDeJTufZ/view?usp=drive_link'
+              className='underline hover:text-gray-600 [html.dark_&]:hover:text-gray-400 transition-all duration-200 ease-out'
+              target='_blank'
+              rel='noopener'
+            >
+              CV
+            </a>
+            .
           </p>
         </div>
       </div>
